@@ -1,0 +1,19 @@
+@media screen and (max-width: 800px) {
+  .invisable {
+    display: none;
+  }
+  .center {
+    margin-left: 12%;
+    width: 100vw;
+    margin-top: -25%;
+  }
+  .more {
+    margin: -35%;
+  }
+  .centerMore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35%;
+  }
+}
