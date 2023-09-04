@@ -3,12 +3,11 @@ import React from "react";
 import navItems from "../../jsonFiles/navItems.json";
 const Navbar = () => {
   return (
-
     <nav
       className="navbar navbar-expand-lg "
       style={{
         background:"rgba(5,8,22,255)",
-        position: "fixed",
+        position: "sticky",
         width:'100%',
         top: "0",
         zIndex: "1000",

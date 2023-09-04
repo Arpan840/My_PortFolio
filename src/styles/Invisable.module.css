@@ -17,3 +17,23 @@
     margin-top: 35%;
   }
 }
+.borderRadious {
+  border-radius: 20px;
+  background-color: #05e8ba;
+  background-image: linear-gradient(315deg, #05e8ba 0%, #022642 0%);
+  box-shadow: 0 0 10px 1px #48abe0,
+              0 0 20px 1px #ebecca,
+              0 0 25px 10px #8a2be2,
+              0 0 30px 15px #ff1493;
+}
+
+.style.tiltEffect {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg); /* Adjust the tilt angles as needed */
+  transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+}
+.experience{
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
+}

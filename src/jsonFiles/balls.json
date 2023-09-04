@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Next Js",
+    "icon": "https://devarticles.in/wp-content/uploads/2021/10/nextjs-log.jpeg"
+  },
+  {
+    "name": "React Js",
+    "icon": "https://cdn3d.iconscout.com/3d/free/thumb/free-react-5645899-4695757.png"
+  },
+  {
+    "name": "Java Script",
+    "icon": "https://miro.medium.com/v2/resize:fit:1200/1*yUNfohs9jA6GCDmyCYJTvA@2x.png"
+  },
+  {
+    "name": "Type Script",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
+  },
+  {
+    "name": "Node Js",
+    "icon": "https://www.javatpoint.com/js/nodejs/images/node-js-tutorial.png"
+  },
+  {
+    "name": "Express Js",
+    "icon": "https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png"
+  },
+  {
+    "name": "Mongo Db",
+    "icon": "https://repvue.imgix.net/a9yxc48y3ay5dm2udzwizc2bdyph"
+  },
+  {
+    "name": "HTML",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png"
+  },
+  {
+    "name": "CSS",
+    "icon": "https://play-lh.googleusercontent.com/RTAZb9E639F4JBcuBRTPEk9_92I-kaKgBMw4LFxTGhdCQeqWukXh74rTngbQpBVGxqo"
+  },
+  { "name": "Meterial UI", "icon": "https://v4.mui.com/static/logo.png" },
+  {
+    "name": "BootStrap",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png"
+  },
+  {
+    "name": "Word Press",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/1200px-WordPress_blue_logo.svg.png"
+  }
+]

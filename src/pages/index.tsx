@@ -1,10 +1,14 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import Hero from "../components/Hero";
+import About from "./about";
+import Experience from "../components/Experience";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
 export default function Home() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
   return (
     <>
       <Head>
@@ -19,9 +23,29 @@ export default function Home() {
           crossOrigin="anonymous"
         ></link>
       </Head>
-      <main>
-        <Navbar></Navbar>
+      <main style={{ background: "rgba(5,8,22,255)", width:"100vw" }}>
         <Hero></Hero>
+        <div ref={ref}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            animate={
+              inView
+                ? {
+                    opacity: 1,
+                    scale: [1, 1, 1, 1, 1],
+                    rotate: [200, 0, 0, 0, 0],
+                    borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                  }
+                : {}
+            }
+            transition={{ duration: 3 }}
+          >
+            <About />
+          </motion.div>
+        </div>
+        <Experience />
 
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

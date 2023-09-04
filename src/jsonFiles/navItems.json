@@ -1,12 +1,18 @@
 [
-    {
-        "name":"About","Link":"/about"
-    },
-    {
-        "name":"Work","Link":"/work"
-    },
-    {
-        "name":"Contact","Link":"/contact"
-    }
-
+  {
+    "name": "Home",
+    "Link": "/"
+  },
+  {
+    "name": "About",
+    "Link": "/about"
+  },
+  {
+    "name": "Work",
+    "Link": "/work"
+  },
+  {
+    "name": "Contact",
+    "Link": "/contact"
+  }
 ]

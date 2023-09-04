@@ -107,13 +107,13 @@ const Hero = () => {
             className={styles.more}
             style={{
               border: "3px solid white",
-              height: "90px",
+              height: "70px",
               width: "40px",
               borderRadius: "20px",
               transform: "translate(40%, -50%)",
               position: "absolute",
               margin: "auto",
-              marginTop: "18%",
+              marginTop: "10%",
               display: "flex",
               justifyContent: "center",
             }}
