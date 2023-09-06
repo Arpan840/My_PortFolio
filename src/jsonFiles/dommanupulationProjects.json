@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Restaurant Catalog",
+    "description": "The Restaurant Catalog Web Application is a dynamic and user-friendly website built using HTML, CSS, and JavaScript. It allows users to access and explore a catalog of various restaurants along with their menus and other relevant details. The application fetches restaurant data from a JSON file and displays it in an organized and visually appealing format, providing users with a seamless experience while exploring different dining options.Interactive Search and Filtering",
+    "webapp": "https://arpan840.github.io/Restaurant_Website/",
+    "image": "https://images.template.net/wp-content/uploads/2017/02/17192806/Restaurant-Brochure-Catalog-Template.jpg"
+  },
+  {
+    "title": "Weather App",
+    "description": "WeatherNow is a user-friendly, web-based weather application that provides you with up-to-the-minute weather information for your live location worldwide. Will show your live location . With an intuitive and visually appealing interface, it's the perfect tool to keep you informed about current weather conditions and forecasts, no matter where you are.",
+    "webapp": "https://arpan840.github.io/weather_application/",
+    "image": "https://fs.npstatic.com/userfiles/7687254/image/Weather-app-w810h462.jpg"
+  },
+  {
+    "title": "CryptoCurrency Tracker",
+    "description": "The CryptoCurrency Tracker is a modern web application that leverages HTML, CSS, and JavaScript to fetch real-time data from a cryptocurrency API and display it in an intuitive and user-friendly format. The application provides users with up-to-date information about various cryptocurrencies, including their current prices, market capitalizations, trading volumes, and price trends.",
+    "webapp": "https://arpan840.github.io/Crypto-tracker/",
+    "image": "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202302/what_is_the_difference_between_blockchain_and_bitcoin-sixteen_nine.png?size=948:533"
+  },
+  {
+    "title": "React JS Text Manipulator",
+    "description": "In that case, the React.js project that focuses on text manipulation could use various client-side technologies to manipulate the text, such as JavaScript string methods, regular expressions, or third-party libraries.",
+    "webapp": "https://arpan840.github.io/text-manupulator/",
+    "image": "https://installtekz.com/wp-content/uploads/2019/06/text_manipulation-min-1.jpg"
+  }
+]

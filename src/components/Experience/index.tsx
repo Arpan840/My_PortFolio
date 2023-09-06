@@ -58,9 +58,18 @@ const Experience = () => {
         >
           <div
             className={style.borderRadious}
-            style={{ width: "25rem", padding: "20px", marginTop: "5%" }}
+            style={{
+              width: "25rem",
+              padding: "20px",
+              marginTop: "5%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection:"column"
+            }}
           >
             <img
+              style={{ width: "60%", height: "50%" }}
               className="card-img-top"
               src={
                 "https://media.licdn.com/dms/image/D4D0BAQFL8OwYfyxtxg/company-logo_200_200/0/1691427307144?e=1701907200&v=beta&t=5hB3DwFpuH03Y0UjW3-aQU72Ob6at234wkSzt0tYtKU"

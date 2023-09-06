@@ -103,6 +103,9 @@
   filter: blur(45px);
   transform: translateZ(0);
 }
+body{
+  background-color: rgb(5, 8, 22);
+}
 
 .logo {
   position: relative;

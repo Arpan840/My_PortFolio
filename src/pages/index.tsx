@@ -4,6 +4,8 @@ import About from "./about";
 import Experience from "../components/Experience";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Work from '../pages/work'
+import Contact from "../components/Contact"
 
 export default function Home() {
   const [ref, inView] = useInView({
@@ -23,30 +25,25 @@ export default function Home() {
           crossOrigin="anonymous"
         ></link>
       </Head>
-      <main style={{ background: "rgba(5,8,22,255)", width:"100vw" }}>
+      <main
+        style={{
+          background: "rgba(5,8,22,255)",
+          width: "100vw",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+        }}
+      >
         <Hero></Hero>
         <div ref={ref}>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            animate={
-              inView
-                ? {
-                    opacity: 1,
-                    scale: [1, 1, 1, 1, 1],
-                    rotate: [200, 0, 0, 0, 0],
-                    borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-                  }
-                : {}
-            }
-            transition={{ duration: 3 }}
-          >
+          <div>
             <About />
-          </motion.div>
+          </div>
         </div>
         <Experience />
-
+        <Work></Work>
+        <Contact></Contact>
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

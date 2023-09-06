@@ -3,6 +3,7 @@ import balls from "../../jsonFiles/balls.json";
 import style from "../../styles/Invisable.module.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Tilt from "react-parallax-tilt";
 
 const Balls = () => {
   const [ref, inView] = useInView({
@@ -19,25 +20,11 @@ const Balls = () => {
         alignItems: "center",
       }}
     >
-      {balls.map((i) => (
-        <motion.div
-          className="box"
-          animate={
-            inView
-              ? {
-                  scale: [1, 2, 2, 1, 1],
-                  rotate: [0, 0, 180, 180, 0],
-                  borderRadius: ["0%", "0%", "50%", "50%", "0%"],
-                }
-              : {}
-          }
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-            times: [0, 0.2, 0.5, 0.8, 1],
-            repeat: 1,
-            repeatDelay: 1,
-          }}
+      {balls.map((i, index) => (
+        <Tilt
+          tiltMaxAngleX={30}
+          tiltMaxAngleY={30}
+          key={index}
           style={{
             width: "20%",
             height: "40%",
@@ -55,7 +42,7 @@ const Balls = () => {
             alt="icon"
           />
           <h3 style={{ color: "white" }}>{i.name}</h3>
-        </motion.div>
+        </Tilt>
       ))}
     </div>
   );
