@@ -1,14 +1,15 @@
-import Link from "next/link";
 import React from "react";
 import navItems from "../../jsonFiles/navItems.json";
+import { Link } from "react-scroll";
+
 const Navbar = () => {
   return (
     <nav
       className="navbar navbar-expand-lg "
       style={{
-        background:"rgba(5,8,22,255)",
+        background: "rgba(5,8,22,255)",
         position: "sticky",
-        width:'100%',
+        width: "100%",
         top: "0",
         zIndex: "1000",
       }}
@@ -36,7 +37,6 @@ const Navbar = () => {
           aria-controls="navbarText"
           aria-expanded="false"
           aria-label="Toggle navigation"
-         
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,14 +54,22 @@ const Navbar = () => {
           </svg>
         </button>
         <div className="collapse navbar-collapse" id="navbarText">
-          <div style={{ justifyContent: "center", display: "flex", width: "100%" }}>
+          <div
+            style={{ justifyContent: "center", display: "flex", width: "100%" }}
+          >
             <ul className="navbar-nav">
               {navItems.map((i) => (
-                <li className="nav-item" >
-                  <Link href={i.Link}>
+                <li className="nav-item">
+                  <Link
+                    smooth={true}
+                    spy={true}
+                    offset={50}
+                    duration={50}
+                    to={i.name}
+                  >
                     <button
                       className="btn  mx-3 text-light "
-                      style={{ width: "100px"}}
+                      style={{ width: "100px" }}
                     >
                       {i.name}
                     </button>

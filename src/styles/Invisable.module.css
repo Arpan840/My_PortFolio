@@ -16,6 +16,9 @@
     justify-content: center;
     margin-top: 35%;
   }
+  .height{
+    height: 705vh;
+  }
 }
 .borderRadious {
   border-radius: 20px;
@@ -35,5 +38,18 @@
   @media screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
+  }
+  
+}
+.slideIn {
+  position: relative;
+  left: -100%; /* Start offscreen to the left */
+  animation: slideIn 1s forwards;
+}
+
+/* Define the animation keyframes */
+@keyframes slideIn {
+  to {
+    left: 0; /* Slide in to the right */
   }
 }

@@ -5,7 +5,7 @@ import Experience from "../components/Experience";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Work from '../pages/work'
-import Contact from "../components/Contact"
+import Contact from "../pages/contact"
 
 export default function Home() {
   const [ref, inView] = useInView({
@@ -26,6 +26,7 @@ export default function Home() {
         ></link>
       </Head>
       <main
+      id="Home"
         style={{
           background: "rgba(5,8,22,255)",
           width: "100vw",
@@ -42,8 +43,8 @@ export default function Home() {
           </div>
         </div>
         <Experience />
-        <Work></Work>
-        <Contact></Contact>
+        <Work/>
+        <Contact/>
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

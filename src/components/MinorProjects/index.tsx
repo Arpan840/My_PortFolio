@@ -8,7 +8,7 @@ import Tilt from "react-parallax-tilt";
 
 const MinorProjects = () => {
   return (
-    <div style={{ height: "250vh" }}>
+    <div style={{ height: "230vh" }}>
       <h1 style={{ color: "white" }}>Minor Projects</h1>
       <h1
         style={{
@@ -30,7 +30,7 @@ const MinorProjects = () => {
         }}
         className={style.experience}
       >
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card bg-dark" style={{ width: "18rem" }}>
           <Image
             className="card-img-top"
             src={inotebood}
@@ -38,8 +38,8 @@ const MinorProjects = () => {
             style={{ width: "100%", height: "80%" }}
           />
           <div className="card-body">
-            <h2 className="card-title">I-Notebook</h2>
-            <p className="card-text">
+            <h2 className="card-title text-light">I-Notebook</h2>
+            <p className="card-text text-light">
               This is a MERN stack web application. Have User Login, User Signup
               features. User can store there notes in this website safe and
               secure. Uses JWT authentication and Bcrypt JS for security.
@@ -65,7 +65,7 @@ const MinorProjects = () => {
             </div>
           </div>
         </div>
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card bg-dark" style={{ width: "18rem" }}>
           <Image
             className="card-img-top"
             src={todo}
@@ -73,8 +73,8 @@ const MinorProjects = () => {
             style={{ width: "100%", height: "60%" }}
           />
           <div className="card-body">
-            <h2 className="card-title">Todo List</h2>
-            <p className="card-text">
+            <h2 className="card-title text-light">Todo List</h2>
+            <p className="card-text text-light">
               The TODO List MERN stack project is a web application that allows
               users to manage and organize their tasks and to-do items in a
               convenient and efficient manner. It leverages the power of the
@@ -121,15 +121,15 @@ const MinorProjects = () => {
           }}
         >
           {domProjects.map((i) => (
-            <div className="card" style={{ width: "18rem", margin:'10px' }}>
+            <div className="card bg-dark" style={{ width: "18rem", margin:'10px' }}>
               <img
                 className="card-img-top"
                 src={i.image}
                 alt="Card image cap"
               />
-              <div className="card-body">
-                <h2 className="card-title">{i.title}</h2>
-                <p className="card-text">{i.description}</p>
+              <div className="card-body ">
+                <h2 className="card-title text-light">{i.title}</h2>
+                <p className="card-text text-light">{i.description}</p>
                 <a href={i.webapp} className="btn btn-primary" target="_blank">
                   Visit Application
                 </a>

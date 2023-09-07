@@ -1,9 +1,10 @@
 import MinorProjects from "../../components/MinorProjects";
 import MajorProject from "../../components/Major Project";
+import style from "../../styles/Invisable.module.css"
 
 const work = () => {
   return (
-    <div style={{ textAlign: "center", background: "rgba(5,8,22,255)" }}>
+    <div id="Work" className={style.height} style={{ textAlign: "center", background: "rgba(5,8,22,255)" }}>
       <h1
         style={{
           color: "skyblue",

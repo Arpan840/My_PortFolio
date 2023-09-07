@@ -3,7 +3,7 @@ import heroBackground from "../../assets/herobg.png";
 import Image from "next/image";
 import styles from "../../styles/Invisable.module.css";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -102,7 +102,7 @@ const Hero = () => {
           justifyContent: "center",
         }}
       >
-        <Link href={"/about"} className={styles.centerMore}>
+        <Link to={"About"} className={styles.centerMore}>
           <div
             className={styles.more}
             style={{
