@@ -10,7 +10,7 @@ const contact = () => {
     id="Contact"
       className={style.slideIn}
       style={{
-        marginTop: "40%",
+        marginTop: "5%",
         background: "rgba(5,8,22,255)",
         width: "100vw",
         display: "flex",
