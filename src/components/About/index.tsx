@@ -4,7 +4,7 @@ import style from "../../styles/Invisable.module.css";
 import Tilt from "react-parallax-tilt";
 import Aos from "aos";
 import 'aos/dist/aos.css'
-import Image from "next/image";
+
 
 const About = () => {
   return (
@@ -96,7 +96,7 @@ const About = () => {
                 justifyContent: "center",
               }}
             >
-              <Image style={{ width: "80%" }} src={i.icon} alt="icon"></Image>
+              <img style={{ width: "80%" }} src={i.icon} alt="icon"></img>
             </div>
             <div
               style={{
