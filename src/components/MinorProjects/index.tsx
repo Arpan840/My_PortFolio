@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 
 const MinorProjects = () => {
   return (
-    <div style={{ height: "230vh" }}>
+    <div>
       <h1 style={{ color: "white" }}>Minor Projects</h1>
       <h1
         style={{
@@ -126,7 +126,6 @@ const MinorProjects = () => {
             display: "flex",
             width: "80vw",
             margin: "auto",
-
             gap: "3%",
           }}
         >

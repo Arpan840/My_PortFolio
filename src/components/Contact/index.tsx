@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 const Contact = () => {
   return (
     <div
-      className={style.contactHeight}
+   
       style={{
         display: "flex",
         background: "rgba(5,8,22,255)",
@@ -35,7 +35,8 @@ const Contact = () => {
           justifyContent: "center",
           width: "80vw",
           gap: "10%",
-          marginTop: "3%",
+          marginTop:'3%'
+          
         }}
       >
         {socilMedia.map((i, index) => (

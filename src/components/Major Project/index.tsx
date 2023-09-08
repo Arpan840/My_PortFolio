@@ -2,13 +2,12 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import Style from "../../styles/Invisable.module.css";
 import Aos from "aos";
-import 'aos/dist/aos.css'
+import "aos/dist/aos.css";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const MajorProject = () => {
   return (
     <div
-   
       style={{
         width: "100vw",
         display: "flex",
@@ -19,7 +18,7 @@ const MajorProject = () => {
         height: "200vh",
       }}
     >
-      <h1 style={{ margin: "3%", color: "white" }}>Major Project</h1>
+      <h1 style={{ marginTop:"100px", color: "white" }}>Major Project</h1>
       <div
         className={Style.experience}
         style={{
@@ -30,7 +29,11 @@ const MajorProject = () => {
           gap: "60px",
         }}
       >
-        <div data-aos={'flip-left'} className="card bg-dark" style={{ width: "18rem" }}>
+        <div
+          data-aos={"flip-left"}
+          className="card bg-dark"
+          style={{ width: "18rem" }}
+        >
           <ReactPlayer
             width={285}
             height={200}
@@ -38,7 +41,9 @@ const MajorProject = () => {
             playing={true}
           />
           <div className="card-body">
-            <h2 className="card-title text-light">Product Synchronizer Application</h2>
+            <h2 className="card-title text-light">
+              Product Synchronizer Application
+            </h2>
             <p className="card-text text-light">
               Product Synchronizer is a comprehensive web-based solution
               tailored to simplify the complex task of managing product
@@ -53,7 +58,11 @@ const MajorProject = () => {
             </Link>
           </div>
         </div>
-        <div data-aos={'flip-left'} className="card bg-dark" style={{ width: "18rem" }}>
+        <div
+          data-aos={"flip-left"}
+          className="card bg-dark"
+          style={{ width: "18rem" }}
+        >
           <img
             className="card-img-top"
             src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_03073e9fa619088246033de8869220ba/payever.png"
