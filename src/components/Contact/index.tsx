@@ -15,8 +15,6 @@ const Contact = () => {
         width: "80vw",
         flexDirection: "column",
         textAlign: "center",
-        height:'100vh'
-        
       }}
     >
       <h1
@@ -89,10 +87,10 @@ const Contact = () => {
           </a>
         ))}
       </div>
-      <div style={{margin:'50px'}}>
-      <p style={{ fontSize: "22px", color: "white",padding:'10px' }}>
-        Made with <span style={{ color: "red" }}>&#9829;</span> by Arpan
-      </p>
+      <div style={{ margin: "50px" }}>
+        <p style={{ fontSize: "22px", color: "white", padding: "10px" }}>
+          Made with <span style={{ color: "red" }}>&#9829;</span> by Arpan
+        </p>
       </div>
     </div>
   );
