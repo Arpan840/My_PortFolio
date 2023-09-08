@@ -19,6 +19,7 @@ const work = () => {
           fontFamily: "monospace",
           fontSize: "50px",
           fontWeight: "bolder",
+          marginTop:'10%'
         }}
       >
         Projects I worked on

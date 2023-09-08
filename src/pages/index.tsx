@@ -9,6 +9,7 @@ import Balls from "../components/Balls";
 import  "aos/dist/aos.css";
 import { useEffect } from "react";
 import Aos from "aos";
+import style from "../styles/Invisable.module.css"
 
 
 export default function Home() {
@@ -60,8 +61,9 @@ export default function Home() {
         </h1>
         <Balls></Balls>
       </div>
-      
+      <div className={style.workMarginTop}>
         <Work/>
+        </div>
         <div >
         <Contact/>
         </div>
