@@ -68,7 +68,7 @@
 }
 @media screen and (max-width: 800px) {
   .contactHeight{
-    margin-top: -380%;
+    margin-top: -360%;
     z-index: 300;
     
   }
