@@ -11,9 +11,13 @@
     "name": "Experience"
   },
   {
+    "name":"Technologies"
+  },
+  {
     "name": "Work",
     "Link": "/work"
   },
+ 
   {
     "name": "Contact",
     "Link": "/contact"

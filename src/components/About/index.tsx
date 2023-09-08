@@ -2,6 +2,8 @@ import { Variants, motion, stagger } from "framer-motion";
 import services from "../../jsonFiles/services.json";
 import style from "../../styles/Invisable.module.css";
 import Tilt from "react-parallax-tilt";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const About = () => {
   return (
@@ -64,6 +66,7 @@ const About = () => {
         }}
       >
         {services.map((i, index) => (
+          <div data-aos={'flip-up'}>
           <Tilt
             glareEnable={true}
             tiltMaxAngleX={30}
@@ -84,6 +87,7 @@ const About = () => {
             }}
           >
             <div
+           
               style={{
                 width: "80%",
                 display: "flex",
@@ -106,6 +110,7 @@ const About = () => {
               {i.title}
             </div>
           </Tilt>
+          </div>
         ))}
       </motion.section>
     </div>

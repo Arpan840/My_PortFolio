@@ -4,6 +4,8 @@ import Image from "next/image";
 import styles from "../../styles/Invisable.module.css";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 const Hero = () => {
   return (
@@ -52,8 +54,8 @@ const Hero = () => {
             }}
           ></div>
         </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <div>
+        <div  style={{ display: "flex", flexDirection: "column" }}>
+          <div className={styles.type}>
             <h1
               style={{
                 color: "white",
@@ -73,17 +75,20 @@ const Hero = () => {
               </span>{" "}
             </h1>
           </div>
-          <p style={{ color: "white" }}>
-            I'm a passionate and highly skilled MERN (MongoDB, Express.js,
-            React, Node.js) stack developer with a strong background in creating
-            web applications and dynamic user experiences. With a deep
-            understanding of both front-end and back-end technologies, I bring
-            your digital ideas to life by crafting robust, scalable, and
-            efficient solutions.
-          </p>
+          <div dats-aos="fade-up">
+            <p style={{ color: "white" }}>
+              I'm a passionate and highly skilled MERN (MongoDB, Express.js,
+              React, Node.js) stack developer with a strong background in
+              creating web applications and dynamic user experiences. With a
+              deep understanding of both front-end and back-end technologies, I
+              bring your digital ideas to life by crafting robust, scalable, and
+              efficient solutions.
+            </p>
+          </div>
         </div>
-        <div className={styles.invisable}>
+        <div data-aos={'flip-right'} className={styles.invisable}>
           <img
+          className={styles.slideInRight}
             style={{ height: "-100%", width: "300%" }}
             src="https://t3.ftcdn.net/jpg/03/18/60/62/360_F_318606217_Hk8jo2MVoI33SQOkYrfOF929J7JgIP0P.jpg"
             alt="hero image"

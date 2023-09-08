@@ -16,40 +16,59 @@
     justify-content: center;
     margin-top: 35%;
   }
-  .height{
-    height: 705vh;
+  .height {
+    height: 750vh;
+    margin-top: -60%;
+    
   }
 }
 .borderRadious {
   border-radius: 20px;
   background-color: #05e8ba;
   background-image: linear-gradient(315deg, #05e8ba 0%, #022642 0%);
-  box-shadow: 0 0 10px 1px #48abe0,
-              0 0 20px 1px #ebecca,
-              0 0 25px 10px #8a2be2,
-              0 0 30px 15px #ff1493;
+  box-shadow: 0 0 10px 1px #48abe0, 0 0 20px 1px #ebecca, 0 0 25px 10px #8a2be2,
+    0 0 30px 15px #ff1493;
 }
 
 .style.tiltEffect {
   transform: perspective(1000px) rotateX(5deg) rotateY(5deg); /* Adjust the tilt angles as needed */
   transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
 }
-.experience{
+.experience {
   @media screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
   }
-  
-}
-.slideIn {
-  position: relative;
-  left: -100%; /* Start offscreen to the left */
-  animation: slideIn 1s forwards;
 }
 
-/* Define the animation keyframes */
-@keyframes slideIn {
+.type {
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  margin: 0;
+  animation: typing 2s steps(10), cursor 0.4s step-end infinite alternate;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
   to {
-    left: 0; /* Slide in to the right */
+    width: 100%;
   }
 }
+
+.type::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+
+  animation: typing 2s steps(13, end);
+}
+@media screen and (max-width: 800px) {
+  .contactHeight{
+    margin-top: -80%;
+  }
+}
+

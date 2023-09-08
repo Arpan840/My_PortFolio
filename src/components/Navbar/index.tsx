@@ -15,11 +15,11 @@ const Navbar = () => {
       }}
     >
       <div className="container-fluid">
-        <p className="navbar-brand" style={{ color: "white" }}>
+        <p className="navbar-brand" style={{ color: "white", fontSize:"30px" }}>
           <img
             style={{
-              height: "40px",
-              width: "40px",
+              height: "50px",
+              width: "50px",
               borderRadius: "200px",
               marginLeft: "3%",
               marginRight: "3%",

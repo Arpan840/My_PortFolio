@@ -98,12 +98,7 @@ const Experience = () => {
           </div>
         </div>
       </div>
-      <div style={{ width: "100vw", textAlign: "center" }}>
-        <h1 style={{ color: "white", margin: "5%" }}>
-          Technologies I worked on
-        </h1>
-        <Balls></Balls>
-      </div>
+     
     </>
   );
 };

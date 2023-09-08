@@ -1,12 +1,14 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Style from "../../styles/Invisable.module.css";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const MajorProject = () => {
   return (
     <div
+   
       style={{
         width: "100vw",
         display: "flex",
@@ -28,7 +30,7 @@ const MajorProject = () => {
           gap: "60px",
         }}
       >
-        <div className="card bg-dark" style={{ width: "18rem" }}>
+        <div data-aos={'flip-left'} className="card bg-dark" style={{ width: "18rem" }}>
           <ReactPlayer
             width={285}
             height={200}
@@ -51,7 +53,7 @@ const MajorProject = () => {
             </Link>
           </div>
         </div>
-        <div className="card bg-dark" style={{ width: "18rem" }}>
+        <div data-aos={'flip-left'} className="card bg-dark" style={{ width: "18rem" }}>
           <img
             className="card-img-top"
             src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_03073e9fa619088246033de8869220ba/payever.png"

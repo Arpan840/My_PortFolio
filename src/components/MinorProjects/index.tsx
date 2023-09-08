@@ -5,6 +5,8 @@ import todo from "../../assets/Screenshot_2023-09-06_22_34_24.png";
 import style from "../../styles/Invisable.module.css";
 import domProjects from "../../jsonFiles/dommanupulationProjects.json";
 import Tilt from "react-parallax-tilt";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const MinorProjects = () => {
   return (
@@ -30,7 +32,7 @@ const MinorProjects = () => {
         }}
         className={style.experience}
       >
-        <div className="card bg-dark" style={{ width: "18rem" }}>
+        <div data-aos={'flip-right'} className="card bg-dark" style={{ width: "18rem" }}>
           <Image
             className="card-img-top"
             src={inotebood}
@@ -65,7 +67,7 @@ const MinorProjects = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-dark" style={{ width: "18rem" }}>
+        <div data-aos={'flip-right'} className="card bg-dark" style={{ width: "18rem" }}>
           <Image
             className="card-img-top"
             src={todo}
@@ -121,7 +123,7 @@ const MinorProjects = () => {
           }}
         >
           {domProjects.map((i) => (
-            <div className="card bg-dark" style={{ width: "18rem", margin:'10px' }}>
+            <div data-aos={"flip-left"} className="card bg-dark" style={{ width: "18rem", margin:'10px' }}>
               <img
                 className="card-img-top"
                 src={i.image}

@@ -2,15 +2,22 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import About from "./about";
 import Experience from "../components/Experience";
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Work from '../pages/work'
 import Contact from "../pages/contact"
+import Balls from "../components/Balls";
+import  "aos/dist/aos.css";
+import { useEffect } from "react";
+import Aos from "aos";
+
 
 export default function Home() {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
+  useEffect(()=>{
+   Aos.init({duration:1000});
+  },[])
   return (
     <>
       <Head>
@@ -36,15 +43,27 @@ export default function Home() {
           flexDirection: "column",
         }}
       >
+        <div data-aos="fade-up">
         <Hero></Hero>
+        </div>
         <div ref={ref}>
-          <div>
+          <div data-aos="fade-down">
             <About />
           </div>
         </div>
-        <Experience />
+        <div data-aos="fade-left">
+        <Experience /></div>
+        <div data-aos="zoom-out" style={{ width: "100vw", textAlign: "center" }}>
+        <h1 style={{ color: "white", margin: "5%" }}>
+          Technologies I worked on
+        </h1>
+        <Balls></Balls>
+      </div>
+      
         <Work/>
+        <div >
         <Contact/>
+        </div>
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
