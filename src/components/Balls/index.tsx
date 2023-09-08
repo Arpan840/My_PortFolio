@@ -45,7 +45,7 @@ const Balls = () => {
             src={i.icon}
             alt="icon"
           />
-          <h3 style={{ color: "white", marginTop:'30px' }}>{i.name}</h3>
+          <h3 style={{ color: "white", marginTop: "30px" }}>{i.name}</h3>
         </Tilt>
       ))}
     </div>

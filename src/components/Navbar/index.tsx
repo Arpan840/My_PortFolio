@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import navItems from "../../jsonFiles/navItems.json";
 import { Link } from "react-scroll";
+import { FaFileCode } from "react-icons/fa";
 
 const Navbar = () => {
+  const [location, setLocation] = useState("Home");
+  const handelClick = (name: string) => {
+    setLocation(name);
+  };
   return (
     <nav
       className="navbar navbar-expand-lg "
@@ -14,21 +19,20 @@ const Navbar = () => {
         zIndex: "1000",
       }}
     >
-      <div className="container-fluid">
-        <p className="navbar-brand" style={{ color: "white", fontSize:"30px" }}>
-          <img
-            style={{
-              height: "50px",
-              width: "50px",
-              borderRadius: "200px",
-              marginLeft: "3%",
-              marginRight: "3%",
-            }}
-            src="https://media.licdn.com/dms/image/D4D03AQGWZkuKXxVCqg/profile-displayphoto-shrink_800_800/0/1690717033455?e=1698883200&v=beta&t=J25DgQy6yuTqKnKPnfapOD6lMEdeAaPcdQFVyN8CYBA"
-            alt="logo"
-          />
-          Full-Stack Developer
-        </p>
+      <div className="container-fluid" style={{ display: "flex" }}>
+        <div
+          className="navbar-brand"
+          style={{ color: "white", fontSize: "30px", marginLeft:'40px' }}
+        >
+          <FaFileCode />
+
+          <i style={{ marginLeft: "10px", fontSize: "25px", fontFamily:'monospaced ' }}>Arpan Das</i>
+
+          <p style={{ color: "white", fontSize: "15px" }}>
+            {" "}
+            MERN STACK DEVELOPER
+          </p>
+        </div>
         <button
           className="navbar-toggler"
           type="button"
@@ -37,6 +41,7 @@ const Navbar = () => {
           aria-controls="navbarText"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          style={{ color: "white" }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -68,8 +73,15 @@ const Navbar = () => {
                     to={i.name}
                   >
                     <button
-                      className="btn  mx-3 text-light "
-                      style={{ width: "100px" }}
+                      className="btn  mx-3  "
+                      style={{
+                        border: `${
+                          location === i.name ? "1px solid lightBlue" : ""
+                        }`,
+                        background: `${location === i.name ? "lightBlue" : ""}`,
+                        color: `${location === i.name ? "blue" : "lightBlue"}`,
+                      }}
+                      onClick={() => handelClick(i.name)}
                     >
                       {i.name}
                     </button>
