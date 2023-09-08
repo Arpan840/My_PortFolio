@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Tilt from "react-parallax-tilt";
 import Aos from "aos";
-import 'aos/dist/aos.css'
+import "aos/dist/aos.css";
 
 const Balls = () => {
   const [ref, inView] = useInView({
@@ -13,7 +13,7 @@ const Balls = () => {
   });
   return (
     <div
-    id="Technologies"
+      id="Technologies"
       style={{
         display: "flex",
         width: "100vw",
@@ -25,7 +25,6 @@ const Balls = () => {
     >
       {balls.map((i, index) => (
         <Tilt
-        
           tiltMaxAngleX={30}
           tiltMaxAngleY={30}
           key={index}
@@ -40,7 +39,7 @@ const Balls = () => {
           }}
         >
           <img
-          data-aos={'flip-right'}
+            data-aos={"flip-right"}
             className={style.borderRadious}
             style={{ width: "50%", height: "50%", borderRadius: "100%" }}
             src={i.icon}

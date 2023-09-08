@@ -41,7 +41,7 @@ const Contact = () => {
         }}
       >
         {socilMedia.map((i, index) => (
-          <a href={i.link} target="_blank" data-aos={"flip-right"}>
+          <a key={i.name} href={i.link} target="_blank" data-aos={"flip-right"}>
             <Tilt
               glareEnable={true}
               tiltMaxAngleX={30}

@@ -63,7 +63,7 @@ const Hero = () => {
                 marginTop: "25px",
               }}
             >
-              Hi! I'm{" "}
+              Hi! Im{" "}
               <span
                 style={{
                   fontFamily: "monospace",
@@ -77,7 +77,7 @@ const Hero = () => {
           </div>
           <div dats-aos="fade-up">
             <p style={{ color: "white" }}>
-              I'm a passionate and highly skilled MERN (MongoDB, Express.js,
+              Im a passionate and highly skilled MERN (MongoDB, Express.js,
               React, Node.js) stack developer with a strong background in
               creating web applications and dynamic user experiences. With a
               deep understanding of both front-end and back-end technologies, I

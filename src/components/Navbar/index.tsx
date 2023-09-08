@@ -59,7 +59,7 @@ const Navbar = () => {
           >
             <ul className="navbar-nav">
               {navItems.map((i) => (
-                <li className="nav-item">
+                <li key={i.name} className="nav-item">
                   <Link
                     smooth={true}
                     spy={true}

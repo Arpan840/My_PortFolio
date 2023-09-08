@@ -40,7 +40,7 @@ const MajorProject = () => {
           <div className="card-body">
             <h2 className="card-title text-light">Product Synchronizer Application</h2>
             <p className="card-text text-light">
-              Product Synchronizer" is a comprehensive web-based solution
+              Product Synchronizer is a comprehensive web-based solution
               tailored to simplify the complex task of managing product
               information across multiple platforms, such as e-commerce
               websites, marketplaces, and digital marketing channels. It offers

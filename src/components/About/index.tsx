@@ -4,6 +4,7 @@ import style from "../../styles/Invisable.module.css";
 import Tilt from "react-parallax-tilt";
 import Aos from "aos";
 import 'aos/dist/aos.css'
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -43,13 +44,13 @@ const About = () => {
           width: "60vw",
         }}
       >
-        I'm a MERN stack developer with one year of experience at Klyth Private
+        Im a MERN stack developer with one year of experience at Klyth Private
         Limited. Proficient in TypeScript, JavaScript, HTML, and CSS, I
         specialize in creating visually appealing, user-friendly web
         applications. I excel in front-end development using React.js, Next.js,
         Material UI, and Bootstrap, while also handling back-end tasks with
-        Node.js, Express.js, and MongoDB. I'm passionate about staying updated
-        with industry trends and I'm committed to delivering high-quality web
+        Node.js, Express.js, and MongoDB. Im passionate about staying updated
+        with industry trends and Im committed to delivering high-quality web
         solutions.
       </motion.p>
       <motion.section
@@ -66,7 +67,7 @@ const About = () => {
         }}
       >
         {services.map((i, index) => (
-          <div data-aos={'flip-up'}>
+          <div data-aos={'flip-up'} key={index}>
           <Tilt
             glareEnable={true}
             tiltMaxAngleX={30}
@@ -95,7 +96,7 @@ const About = () => {
                 justifyContent: "center",
               }}
             >
-              <img style={{ width: "80%" }} src={i.icon} alt="icon"></img>
+              <Image style={{ width: "80%" }} src={i.icon} alt="icon"></Image>
             </div>
             <div
               style={{

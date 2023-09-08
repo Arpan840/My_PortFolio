@@ -1,4 +1,4 @@
-import React from "react";
+import react from 'react'
 
 const ProductSync = () => {
   return (
@@ -15,28 +15,28 @@ const ProductSync = () => {
         style={{
           width: "80vw",
          
-          margin: "auto",
-           height:'400vh',
+          margin:" auto",
+           height:"400vh",
           color: "white",
         }}
       >
-        <h1 style={{ width: "100%", textAlign: "center", padding:"3%" }}>
+        <h1 style={{ width: "100%", textAlign:"center", padding:"3% "}}>
           Product Synchronizer
         </h1>
         <p>
-          "Product Synchronizer" is a sophisticated web application designed to
+          Product Synchronizer is a sophisticated web application designed to
           streamline and enhance the management and synchronization of
           product-related data and information across various platforms and
           channels. This versatile tool serves as a valuable asset for
           businesses and e-commerce enterprises looking to efficiently manage
           their product catalog, improve data accuracy, and optimize their
-          online presence. Here's a detailed description of the "Product
-          Synchronizer" web application:
+          online presence. Heres a detailed description of the Product
+          Synchronizer web application:
         </p>
 
         <h3>Overview:</h3>
         <p>
-          "Product Synchronizer" is a comprehensive web-based solution tailored
+          Product Synchronizer is a comprehensive web-based solution tailored
           to simplify the complex task of managing product information across
           multiple platforms, such as e-commerce websites, marketplaces, and
           digital marketing channels. It offers a centralized hub for businesses
@@ -63,7 +63,7 @@ const ProductSync = () => {
 
         <h3>Inventory Control:</h3>
         <p>
-          "Product Synchronizer" offers real-time inventory management, helping
+          Product Synchronizer offers real-time inventory management, helping
           businesses avoid overselling and manage stock levels efficiently.
           Automatic updates prevent discrepancies in stock availability.
         </p>
@@ -84,7 +84,7 @@ const ProductSync = () => {
 
         <h3>Data Enrichment:</h3>
         <p>
-          "Product Synchronizer" can enrich product data by automatically
+          Product Synchronizer can enrich product data by automatically
           pulling in additional information, such as product reviews, ratings,
           and related items, from external sources.
         </p>
@@ -113,7 +113,7 @@ const ProductSync = () => {
         <h3>Benefits:</h3>
         <ul>
           <li>
-            <strong>Time and Cost Savings:</strong> "Product Synchronizer"
+            <strong>Time and Cost Savings:</strong> Product Synchronizer
             reduces the time and effort required to manage product information
             across various platforms, freeing up resources for other business
             tasks.
@@ -125,7 +125,7 @@ const ProductSync = () => {
           </li>
           <li>
             <strong>Enhanced Visibility:</strong> Synchronizing products across
-            multiple channels increases a business's online visibility,
+            multiple channels increases a businesss online visibility,
             potentially leading to higher sales and broader market reach.
           </li>
           <li>
@@ -134,8 +134,8 @@ const ProductSync = () => {
             platforms can give businesses a competitive edge.
           </li>
           <li>
-            <strong>Efficient Scalability:</strong> As businesses grow, "Product
-            Synchronizer" scales with them, accommodating an expanding product
+            <strong>Efficient Scalability:</strong> As businesses grow, Product
+            Synchronizer scales with them, accommodating an expanding product
             catalog and additional sales channels.
           </li>
         </ul>

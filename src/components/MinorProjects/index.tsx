@@ -123,7 +123,7 @@ const MinorProjects = () => {
           }}
         >
           {domProjects.map((i) => (
-            <div data-aos={"flip-left"} className="card bg-dark" style={{ width: "18rem", margin:'10px' }}>
+            <div key={i.title} data-aos={"flip-left"} className="card bg-dark" style={{ width: "18rem", margin:'10px' }}>
               <img
                 className="card-img-top"
                 src={i.image}

@@ -3,12 +3,8 @@ import MajorProject from "../../components/Major Project";
 import style from "../../styles/Invisable.module.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 const work = () => {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
   return (
     <div
       data-aos={"zoom-in"}
@@ -27,7 +23,7 @@ const work = () => {
       >
         Projects I worked on
       </h1>
-      <div data-aos={'flip-left'} style={{ marginTop: "-20%" }}>
+      <div data-aos={"flip-left"} style={{ marginTop: "-20%" }}>
         <MajorProject></MajorProject>
       </div>
       <div style={{ marginTop: "-10%" }}>
