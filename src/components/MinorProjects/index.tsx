@@ -32,7 +32,11 @@ const MinorProjects = () => {
         }}
         className={style.experience}
       >
-        <div data-aos={'flip-right'} className="card bg-dark" style={{ width: "18rem" }}>
+        <div
+          data-aos={"flip-right"}
+          className="card bg-dark"
+          style={{ width: "18rem" }}
+        >
           <Image
             className="card-img-top"
             src={inotebood}
@@ -67,7 +71,11 @@ const MinorProjects = () => {
             </div>
           </div>
         </div>
-        <div data-aos={'flip-right'} className="card bg-dark" style={{ width: "18rem" }}>
+        <div
+          data-aos={"flip-right"}
+          className="card bg-dark"
+          style={{ width: "18rem" }}
+        >
           <Image
             className="card-img-top"
             src={todo}
@@ -113,7 +121,7 @@ const MinorProjects = () => {
           DOM Manipulation Projects
         </h1>
         <div
-        className={style.experience}
+          className={style.experience}
           style={{
             display: "flex",
             width: "80vw",
@@ -123,7 +131,12 @@ const MinorProjects = () => {
           }}
         >
           {domProjects.map((i) => (
-            <div key={i.title} data-aos={"flip-left"} className="card bg-dark" style={{ width: "18rem", margin:'10px' }}>
+            <div
+              key={i.title}
+              data-aos={"flip-left"}
+              className="card bg-dark"
+              style={{ width: "18rem", margin: "10px" }}
+            >
               <img
                 className="card-img-top"
                 src={i.image}
@@ -131,7 +144,7 @@ const MinorProjects = () => {
               />
               <div className="card-body ">
                 <h2 className="card-title text-light">{i.title}</h2>
-                <p className="card-text text-light">{i.description}</p>
+
                 <a href={i.webapp} className="btn btn-primary" target="_blank">
                   Visit Application
                 </a>
@@ -154,11 +167,10 @@ const MinorProjects = () => {
               justifyContent: "center",
               flexDirection: "column",
               backgroundColor: "rgb(49 46 129)",
-              marginTop:'2%'
+              marginTop: "2%",
             }}
           >
             <div
-           
               style={{
                 width: "80%",
                 display: "flex",
@@ -172,8 +184,12 @@ const MinorProjects = () => {
                 alt="icon"
               ></img>
             </div>
-            <a href="https://github.com/Arpan840?tab=repositories" target="_blank">
-            <p style={{color:'white'}}>Visit my github for more .....</p></a>
+            <a
+              href="https://github.com/Arpan840?tab=repositories"
+              target="_blank"
+            >
+              <p style={{ color: "white" }}>Visit my github for more .....</p>
+            </a>
             <div
               style={{
                 display: "flex",
