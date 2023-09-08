@@ -41,6 +41,7 @@ export default function Home() {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
+          overflow:'hidden'
         }}
       >
         <div data-aos="fade-up">
