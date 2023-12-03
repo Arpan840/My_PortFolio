@@ -89,7 +89,7 @@ const Experience = () => {
               <p className="card-text">
                 As a Senior Frontend Developer at nextPage IT Solutions, I am at the forefront of transforming digital landscapes. Collaborating with a talented team, I lead the development of cutting-edge user interfaces, ensuring seamless integration and optimal performance. My role involves translating design concepts into pixel-perfect, responsive applications, utilizing my expertise in modern frontend frameworks like React, Angular, or Vue.js.
 
-                Working in an innovative environment, I contribute to the company's commitment to excellence in coding, testing, and version control. Beyond crafting code, I mentor junior developers, fostering a collaborative and growth-oriented culture. The flexibility of our work environment and the emphasis on continuous learning make nextPage IT Solutions an ideal place for honing skills and pushing the boundaries of frontend development.
+                Working in an innovative environment, I contribute to the companys commitment to excellence in coding, testing, and version control. Beyond crafting code, I mentor junior developers, fostering a collaborative and growth-oriented culture. The flexibility of our work environment and the emphasis on continuous learning make nextPage IT Solutions an ideal place for honing skills and pushing the boundaries of frontend development.
               </p>
               <a href="https://www.nextpageit.com/" className="btn btn-primary" target="_blank">
                 Visit website
