@@ -1,0 +1,25 @@
+[
+    {
+        "title": "Wispa Remote working app",
+        "description": "Wispa, a groundbreaking project I contributed to as a Front-End Vue.js Developer, is more than just a remote working app—it's a transformative platform that seamlessly connects teams across distances. Through intuitive design and Vue.js functionality, Wispa fosters a collaborative virtual workspace, enhancing productivity and communication for remote teams. Proud to have been part of creating a solution that brings people together, regardless of physical boundaries. #RemoteWorkApp #VueJSDeveloper #Innovation",
+       
+        "image":"https://play-lh.googleusercontent.com/hyKGNiGqfBEILRDhhsnPcthy4H_HEu8zOhgtAptwSJL7tv-vrR2P6Aiax0fLRku57Ec=w240-h480-rw",
+        "deployment_Link":"https://app.wispa.me/#/pages/login" 
+    },
+    {
+        "title": "360 admin panel",
+        "description": "As a React developer in a collaborative team setting, I played a key role in designing and implementing a feature-rich admin panel application. This project involved leveraging React's modular structure to create a scalable and intuitive interface. Our teamwork resulted in a robust admin tool, enhancing project management, data visualization, and user permissions. I take pride in contributing to a successful team project that streamlined workflows and improved overall efficiency. #ReactDeveloper #TeamCollaboration #ProjectManagement",
+       
+        "image":"https://st.360linked.com/static/media/linkedLogo.68332cfe1d2b79ee6689f8a809beca0f.svg",
+        "deployment_Link":"https://st.360linked.com/#/auth/login" 
+    },
+  {
+    "title": "Grapevine Paid Survey app",
+    "description": "In a collaborative team effort, we engineered a cutting-edge survey application using React. Our collective skills contributed to the creation of interactive survey forms, ensuring a seamless user experience. By harnessing React's capabilities, we implemented dynamic features and real-time updates. The team's dedication resulted in a polished survey app, showcasing our commitment to excellence in user interface design and functionality. Excited to have been part of this collaborative journey! #TeamProject #ReactJS #SurveyApp #Collaboration",
+   
+    "image":"https://i.ytimg.com/vi/0jnLUDSjzDo/maxresdefault.jpg",
+    "deployment_Link":"https://survey-app.npit.at/#/" 
+}
+
+  
+]
