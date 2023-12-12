@@ -1,16 +1,19 @@
 import React from 'react'
 import majorProjects from "../../jsonFiles/majorProjects.json"
 import Link from 'next/link'
+import style from "../../styles/Invisable.module.css";
 
 const MostRecent = () => {
   return (
-    <div className='my-5 w-100'>
+    <div className={style.experience}>
         <div style={{
           display:"flex",
           flexWrap:'wrap',
           gap:'40px',
           alignItems:'center',
-          justifyContent:'center'
+          justifyContent:'center',
+          width:"100%",
+
           
         }}>
           {

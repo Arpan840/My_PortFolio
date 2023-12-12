@@ -26,7 +26,7 @@ const work = () => {
         Projects I worked on
       </h1>
       <h1 style={{ marginTop: "100px", color: "white" }}>Major Project</h1>
-      <h1 style={{ color: "white" }}>Most Recent</h1>
+      <h3 style={{ color: "white", textDecoration:'underline' }}>Most Recent</h3>
       <div
         
         style={{
