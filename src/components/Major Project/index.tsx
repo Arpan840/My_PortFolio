@@ -9,14 +9,14 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 const MajorProject = () => {
   return (
     <div
-      className="flex-wrap  d-flex"
+     
       style={{
         width: "100vw",
-
+        display:"flex",
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
-        marginTop: "-25vh",
+        
         height: "200vh",
       }}
     >
@@ -31,16 +31,11 @@ const MajorProject = () => {
           gap:"2.5%"
         }}
       >
-        <div style={{
-          display:"flex",
-          flexWrap:'wrap',
-          gap:'40px'
-        }}>
+        <div className="d-flex flex-wrap gap-5">
           {
             majorProjects.map((i:any,index:number) => (
               <>
                 <div
-                key={index}
                   data-aos={"flip-left"}
                   className="card bg-dark "
                   style={{ width: "18rem" }}
