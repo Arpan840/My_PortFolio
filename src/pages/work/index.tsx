@@ -20,15 +20,29 @@ const work = () => {
           fontFamily: "monospace",
           fontSize: "50px",
           fontWeight: "bolder",
-          marginTop:'10%'
+          marginTop: "10%",
         }}
       >
         Projects I worked on
       </h1>
-      <div data-aos={"flip-left"} style={{}}>
-        {/* <MostRecent></MostRecent> */}
-        <MajorProject></MajorProject> 
+      <h1 style={{ color: "white" }}>Most Recent</h1>
+      <div
+        
+        style={{
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'center',
+          width:'60vw',
+          margin: "auto",
+        }}
+      >
+        <MostRecent></MostRecent>
       </div>
+      <div data-aos={"flip-left"} style={{}}>
+        {/* */}
+        <MajorProject></MajorProject>
+      </div>
+
       <div style={{ marginTop: "-10%" }}>
         <MinorProjects></MinorProjects>
       </div>

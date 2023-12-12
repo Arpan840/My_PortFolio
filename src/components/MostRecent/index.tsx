@@ -8,7 +8,8 @@ const MostRecent = () => {
         <div style={{
           display:"flex",
           flexWrap:'wrap',
-          gap:'40px'
+          gap:'40px',
+          
         }}>
           {
             majorProjects.map((i:any,index:number) => (
