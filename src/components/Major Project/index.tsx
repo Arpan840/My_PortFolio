@@ -31,7 +31,11 @@ const MajorProject = () => {
           gap:"2.5%"
         }}
       >
-        <div className="d-flex flex-wrap gap-5">
+        <div style={{
+          display:"flex",
+          flexWrap:'wrap',
+          gap:'40px'
+        }}>
           {
             majorProjects.map((i:any,index:number) => (
               <>
