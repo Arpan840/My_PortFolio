@@ -9,6 +9,8 @@ const MostRecent = () => {
           display:"flex",
           flexWrap:'wrap',
           gap:'40px',
+          alignItems:'center',
+          justifyContent:'center'
           
         }}>
           {

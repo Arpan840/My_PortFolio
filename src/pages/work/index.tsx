@@ -25,6 +25,7 @@ const work = () => {
       >
         Projects I worked on
       </h1>
+      <h1 style={{ marginTop: "100px", color: "white" }}>Major Project</h1>
       <h1 style={{ color: "white" }}>Most Recent</h1>
       <div
         
@@ -32,7 +33,7 @@ const work = () => {
           display:'flex',
           alignItems:'center',
           justifyContent:'center',
-          width:'80vw',
+          width:'100vw',
           margin: "auto",
         }}
       >
