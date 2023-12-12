@@ -32,7 +32,7 @@ const work = () => {
           display:'flex',
           alignItems:'center',
           justifyContent:'center',
-          width:'60vw',
+          width:'80vw',
           margin: "auto",
         }}
       >
