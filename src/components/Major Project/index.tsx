@@ -8,6 +8,7 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const MajorProject = () => {
   return (
+    <><h1 style={{ marginTop: "100px", color: "white" }}>Major Project</h1>
     <div
      
       style={{
@@ -20,7 +21,7 @@ const MajorProject = () => {
         height: "200vh",
       }}
     >
-      <h1 style={{ marginTop: "100px", color: "white" }}>Major Project</h1>
+      
       <div
         className={Style.experience}
         style={{
@@ -123,6 +124,7 @@ const MajorProject = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
