@@ -17,7 +17,7 @@ const MajorProject = () => {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
-        
+        marginTop:"-35vh",
         height: "200vh",
       }}
     >

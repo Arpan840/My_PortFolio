@@ -38,7 +38,7 @@ const work = () => {
       >
         <MostRecent></MostRecent>
       </div>
-      <div data-aos={"flip-left"} style={{}}>
+      <div data-aos={"flip-left"} >
         {/* */}
         <MajorProject></MajorProject>
       </div>
