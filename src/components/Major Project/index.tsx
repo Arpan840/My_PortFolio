@@ -33,9 +33,10 @@ const MajorProject = () => {
       >
         <div className="d-flex flex-wrap gap-5">
           {
-            majorProjects.map((i: any) => (
+            majorProjects.map((i:any,index:number) => (
               <>
                 <div
+                key={index}
                   data-aos={"flip-left"}
                   className="card bg-dark "
                   style={{ width: "18rem" }}
