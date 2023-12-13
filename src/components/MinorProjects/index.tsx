@@ -127,6 +127,7 @@ const MinorProjects = () => {
             width: "80vw",
             margin: "auto",
             gap: "3%",
+            zIndex:"999"
           }}
         >
           {domProjects.map((i) => (
@@ -167,6 +168,7 @@ const MinorProjects = () => {
               flexDirection: "column",
               backgroundColor: "rgb(49 46 129)",
               marginTop: "2%",
+              zIndex:'999'
             }}
           >
             <div
