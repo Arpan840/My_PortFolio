@@ -6,6 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 const Contact = () => {
   return (
+    <div className={style.contact}>
     <div
    
       style={{
@@ -28,7 +29,7 @@ const Contact = () => {
       </h1>
       <div
         data-aos={"flip-left"}
-        className={style.experience}
+        
         style={{
           display: "flex",
           alignItems: "center",
@@ -93,6 +94,7 @@ const Contact = () => {
           Made with <span style={{ color: "red" }}>&#9829;</span> by Arpan
         </p>
       </div>
+    </div>
     </div>
   );
 };
