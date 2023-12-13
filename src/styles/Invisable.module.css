@@ -21,6 +21,9 @@
     margin-top: -60%;
     
   }
+  .marginTop{
+    margin-top: 30vh;
+  }
 }
 .borderRadious {
   border-radius: 20px;
@@ -38,6 +41,7 @@
   @media screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
+    margin-top: 15vh;
   }
 }
 

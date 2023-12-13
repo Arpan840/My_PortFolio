@@ -49,7 +49,7 @@ const Experience = () => {
           </h1>
         </motion.div>
         <div
-          className="experience"
+          className={style.experience}
           style={{
             width: "100vw",
             display: "flex",

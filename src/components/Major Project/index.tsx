@@ -10,7 +10,7 @@ const MajorProject = () => {
   return (
     <>
     <div
-     
+     className={Style.marginTop}
       style={{
         width: "100vw",
         display:"flex",
