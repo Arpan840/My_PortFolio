@@ -41,7 +41,7 @@
   @media screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
-    margin-top: 15vh;
+    margin-top: 25vh;
   }
 }
 
