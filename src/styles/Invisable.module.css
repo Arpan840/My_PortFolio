@@ -76,5 +76,10 @@
   .workMarginTop{
     margin-top: 50%;
   }
+ .contact{
+  display: flex;
+  flex-direction: column;
+ 
+ }
 }
 

@@ -6,7 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 const Contact = () => {
   return (
-    <div className={style.contact}>
+    <div >
     <div
    
       style={{
@@ -29,7 +29,7 @@ const Contact = () => {
       </h1>
       <div
         data-aos={"flip-left"}
-        
+        className={style.contact}
         style={{
           display: "flex",
           alignItems: "center",
