@@ -6,9 +6,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 const Contact = () => {
   return (
-    <div >
+    <div  className={style.marginTop}>
     <div
-   
+     
       style={{
         display: "flex",
         background: "rgba(5,8,22,255)",

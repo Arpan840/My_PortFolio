@@ -22,7 +22,7 @@
     
   }
   .marginTop{
-    margin-top: 30vh;
+    margin-top: 10vh;
   }
 }
 .borderRadious {
@@ -72,13 +72,13 @@
 }
 @media screen and (max-width: 800px) {
   .contactHeight{
-    margin-top: 100vh;
+    margin-top: 200vh;
     z-index: 300;
     
     
   }
   .workMarginTop{
-    margin-top: 50%;
+    margin-top: 200vh;
   }
  .contact{
   display: flex;
