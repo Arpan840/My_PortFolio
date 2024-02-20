@@ -18,7 +18,7 @@ const MostRecent = () => {
         }}>
           {
             majorProjects.map((i:any,index:number) => (
-              <Link href={i.deploymentLink} style={{textDecoration:'none'}} target='blank'>
+              <Link key={index} href={i.deploymentLink} style={{textDecoration:'none'}} target='blank'>
                 <div
                 key={index}
                   data-aos={"flip-left"}
