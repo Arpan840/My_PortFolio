@@ -18,7 +18,7 @@ const MostRecent = () => {
         }}>
           {
             majorProjects.map((i:any,index:number) => (
-              <>
+              <Link href={i.deploymentLink} style={{textDecoration:'none'}} target='blank'>
                 <div
                 key={index}
                   data-aos={"flip-left"}
@@ -39,13 +39,10 @@ const MostRecent = () => {
                     <p className="card-text text-light">
                       {i.description}
                     </p>
-                    <Link href={i.deployment_Link} className="btn btn-primary" target="_blank">
-                      Visit
-                    </Link>
+                   
                   </div>
                 </div>
-              </>
-
+              </Link>
             ))
           }
         </div>
