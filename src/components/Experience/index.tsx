@@ -1,11 +1,13 @@
 import { motion, useInView } from "framer-motion";
 import style from "../../styles/Invisable.module.css";
+import Image from 'next/image';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Balls from "../Balls";
+import klythePro from "../../../public/assets/company/klythe.jpeg"
 
 const Experience = () => {
   return (
@@ -108,12 +110,10 @@ const Experience = () => {
               flexDirection: "column"
             }}
           >
-            <img
+            <Image
               style={{ width: "60%", height: "50%" }}
               className="card-img-top"
-              src={
-                "https://media.licdn.com/dms/image/D4D0BAQFL8OwYfyxtxg/company-logo_200_200/0/1691427307144?e=1701907200&v=beta&t=5hB3DwFpuH03Y0UjW3-aQU72Ob6at234wkSzt0tYtKU"
-              }
+              src={klythePro}
               alt="Card image cap"
             />
             <div className="card-body">
@@ -130,7 +130,7 @@ const Experience = () => {
                 stack. Over the course of one year, I have contributed to
                 various projects and have developed a strong skill set
               </p>
-              <a href="https://klythe.com/" className="btn btn-primary" target="_blank">
+              <a href="https://www.linkedin.com/company/klythe/about/" className="btn btn-primary" target="_blank">
                 Visit website
               </a>
             </div>
