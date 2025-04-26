@@ -1,5 +1,25 @@
 [
   {
+   "title": "House of Peace Mobile & Admin Web Application",
+    "description":"House of Peace is a mobile-first spiritual and wellness platform designed to offer users peaceful audio content such as prayers, meditations, and guided sessions. While the main mobile application is developed in Flutter, I have played a pivotal role as a full-stack developer responsible for architecting and building the backend infrastructure and the admin panel frontend."
+    ,
+    "image":"https://play-lh.googleusercontent.com/_D9ITxDfj4B7yspHhUew9tRen3XUSEQCCJB6FM7devvJU9YBJ9zut0ejoKbK011EtpfN=w480-h960-rw",
+    "deploymentLink":"https://play.google.com/store/apps/details?id=com.paulinathurm.houseofpeace&hl=en_IN&pli=1"
+  },
+  {
+   "title": "Assistant up",
+    "description":"Advanced Employee & Client Records Management System Introducing our sophisticated Employee & Client Records Management System, engineered to handle complex data management and intricate calculations with precision. This advanced platform is designed to meet the demands of organizations with detailed payroll and client tracking requirements."
+    ,
+    "image":"https://media.licdn.com/dms/image/v2/D562DAQHrKEpZDXhQeQ/profile-treasury-image-shrink_160_160/profile-treasury-image-shrink_160_160/0/1726241238080?e=1746288000&v=beta&t=4jw7mT_EDH_--Ls1pwvoMYdgFgd2iJk32RFYRLFj2_0",
+    "deploymentLink":"*"
+  },
+  {
+    "title": "Wealth Words",
+    "description": "Wealth Words is an online gambling platform that offers a unique and engaging way to play crossword puzzles while also having the opportunity to win real money prizes. It provides a wide range of crossword puzzles with varying difficulty levels, ensuring there's something for everyone, from beginners to seasoned puzzle enthusiasts.",
+    "image":"https://i.imgur.com/zTwbAN3.png",
+    "deploymentLink":"https://www.wealthwords.com/"
+  },
+  {
     "title": "Wispa Remote working app",
     "description": "Wispa, a groundbreaking project I contributed to as a Front-End Vue.js Developer, is more than just a remote working app—it's a transformative platform that seamlessly connects teams across distances. Through intuitive design and Vue.js functionality, Wispa fosters a collaborative virtual workspace, enhancing productivity and communication for remote teams. Proud to have been part of creating a solution that brings people together, regardless of physical boundaries. #RemoteWorkApp #VueJSDeveloper #Innovation",
 
