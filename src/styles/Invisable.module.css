@@ -87,4 +87,91 @@
  
  }
 }
+/* Invisable.module.css */
+
+.experienceContainer {
+  color: white;
+  width: 100vw;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleContainer {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subheading {
+  font-size: 28px;
+  color: white;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: bold;
+  color: #915eff;
+  font-family: monospace;
+}
+
+.cardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  width: 350px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card-title {
+  font-size: 24px;
+  color: skyblue;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  background-color: #915eff;
+  border: none;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #7b49e4;
+}
+
 
