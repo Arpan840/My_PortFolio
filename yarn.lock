@@ -226,7 +226,7 @@
     utility-types "^3.10.0"
     zustand "^3.5.13"
 
-"@react-three/fiber@^8.13.7", "@react-three/fiber@>=6.0", "@react-three/fiber@>=8.0", "@react-three/fiber@latest":
+"@react-three/fiber@^8.13.7", "@react-three/fiber@>=6.0", "@react-three/fiber@>=8.0":
   version "8.13.7"
   resolved "https://registry.npmjs.org/@react-three/fiber/-/fiber-8.13.7.tgz"
   integrity sha512-fH1wYi8+A2YZX8uYd9N4hfbAV+kHE565s7f62+SMNmpeynaUsN8NzXACmmJ6BpVKAKdxfvOde6dBGwG1BrWOKQ==
@@ -2068,7 +2068,7 @@ react-composer@^5.0.3:
   dependencies:
     prop-types "^15.6.0"
 
-"react-dom@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0", react-dom@^18.0.0, react-dom@^18.2.0, react-dom@>=16.13, react-dom@>=17.0, react-dom@>=18.0, react-dom@18.2.0:
+"react-dom@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0", react-dom@^18.0.0, react-dom@^18.2.0, react-dom@>=16.13, react-dom@>=18.0, react-dom@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -2137,13 +2137,6 @@ react-scroll@^1.8.9:
   dependencies:
     lodash.throttle "^4.1.1"
     prop-types "^15.7.2"
-
-react-three-fiber@^6.0.13:
-  version "6.0.13"
-  resolved "https://registry.npmjs.org/react-three-fiber/-/react-three-fiber-6.0.13.tgz"
-  integrity sha512-uShQnkMVLvnzwf3YzY9mnzCnpmLpvTQkc0ycrtwk8fyjXmZt2695tLn3tufPF6uxq06UKJRKJcjCVCMXyUcEPQ==
-  dependencies:
-    "@react-three/fiber" latest
 
 react-use-measure@^2.1.1:
   version "2.1.1"
@@ -2298,7 +2291,12 @@ seedrandom@^3.0.5:
   resolved "https://registry.npmjs.org/seedrandom/-/seedrandom-3.0.5.tgz"
   integrity sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==
 
-semver@^6.3.0, semver@^6.3.1:
+semver@^6.3.0:
+  version "6.3.1"
+  resolved "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
+  integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
+
+semver@^6.3.1:
   version "6.3.1"
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
@@ -2458,11 +2456,6 @@ text-table@^0.2.0:
   resolved "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
   integrity sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==
 
-three-gltf-loader@^1.111.0:
-  version "1.111.0"
-  resolved "https://registry.npmjs.org/three-gltf-loader/-/three-gltf-loader-1.111.0.tgz"
-  integrity sha512-f2d6J5sMEC+dvRcpRjE8g9vqtvpNfnR7bgd+R7Y0dj2mmHwKN5luKe/WYA0Z9+j7mhjla/AC5DGxdXsu8wFhug==
-
 three-mesh-bvh@^0.6.0:
   version "0.6.5"
   resolved "https://registry.npmjs.org/three-mesh-bvh/-/three-mesh-bvh-0.6.5.tgz"
@@ -2485,7 +2478,7 @@ three-stdlib@^2.23.9:
     potpack "^1.0.1"
     zstddec "^0.0.2"
 
-three@^0.156.0, "three@>= 0.151.0", three@>=0.111.0, three@>=0.125.0, three@>=0.126, three@>=0.126.1, three@>=0.128.0, three@>=0.133, three@>=0.137, three@>=0.144.0:
+three@^0.156.0, "three@>= 0.151.0", three@>=0.125.0, three@>=0.126, three@>=0.126.1, three@>=0.128.0, three@>=0.133, three@>=0.137, three@>=0.144.0:
   version "0.156.0"
   resolved "https://registry.npmjs.org/three/-/three-0.156.0.tgz"
   integrity sha512-r6meetGWDk3aYjDRh6NpKuUkzoPlI3yldDQe2SkwCcqTTB5NZn7vKQBUXyMExvlwZShaLmvAbsVWaFzp1rkk3A==
