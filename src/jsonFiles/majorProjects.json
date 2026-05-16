@@ -69,7 +69,7 @@
   },
    {
     "title": "House of Peace — Global Music Streaming Platform",
-    "deploymentLink": "#",
+    "deploymentLink": "https://play.google.com/store/apps/details?id=com.houseofpeace.app",
     "stack": [
       "Node.js",
       "TypeScript",
