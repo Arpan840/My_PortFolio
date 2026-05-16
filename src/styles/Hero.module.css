@@ -8,11 +8,16 @@
 
   background: #050816;
 
-  scroll-behavior: smooth;
-
-  padding-top: 120px;
+  padding-top: 110px;
 }
+@media(max-width:768px){
 
+  .main {
+
+    padding-top: 0;
+  }
+
+}
 
 @keyframes moveGrid {
   from {
@@ -430,7 +435,7 @@
 
 .heroWrapper {
 
-  position: relative;
+   position: relative;
 
   min-height: calc(100vh - 110px);
 
@@ -451,7 +456,14 @@
     );
 }
 
+@media(max-width:768px){
 
+  .heroWrapper {
+
+    min-height: 100vh;
+  }
+
+}
 
 /* STARS */
 
