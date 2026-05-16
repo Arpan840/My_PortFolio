@@ -1,88 +1,99 @@
 import Head from "next/head";
+import { useEffect } from "react";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 import Hero from "../components/Hero";
 import About from "./about";
 import Experience from "../components/Experience";
-import { useInView } from "react-intersection-observer";
-import Work from "../pages/work";
-import Contact from "../pages/contact";
+import Work from "./work";
+import Contact from "./contact";
 import Balls from "../components/Balls";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-import Aos from "aos";
-import style from "../styles/Invisable.module.css";
+
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-  });
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({
+      duration: 900,
+      once: true,
+      offset: 80,
+    });
   }, []);
+
   return (
     <>
       <Head>
-        <title>My Port Folio</title>
+        <title>
+          Arpan Das | Full Stack Systems Engineer
+        </title>
+
         <meta
           name="description"
-          content="Arpan Das Software Portfolio showcasing web and mobile applications, projects, and skills. Hire me for your next software development project!"
+          content="
+          Arpan Das builds scalable SaaS systems,
+          distributed backend infrastructure,
+          AI-powered products, SDKs,
+          and enterprise software solutions.
+          "
         />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        />
+
         <link
           rel="icon"
-          href="https://cdn-icons-png.flaticon.com/512/8759/8759045.png"
+          href="/favicon.png"
         />
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-          crossOrigin="anonymous"
-        ></link>
       </Head>
+
       <main
         id="Home"
-        style={{
-          background: "rgba(5,8,22,255)",
-          width: "100vw",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          overflow: "hidden",
-        }}
+        className={styles.main}
       >
-        <div data-aos="fade-up">
-          <Hero></Hero>
-        </div>
-        <div ref={ref}>
-          <div data-aos="fade-down">
-            <About />
-          </div>
-        </div>
-        <div data-aos="fade-left">
+        {/* Hero */}
+        <section data-aos="fade-up">
+          <Hero />
+        </section>
+
+        {/* About */}
+        <section data-aos="fade-up">
+          <About />
+        </section>
+
+        {/* Experience */}
+        <section data-aos="fade-up">
           <Experience />
-        </div>
-        <div
-          data-aos="zoom-out"
-          style={{ width: "100vw", textAlign: "center" }}
+        </section>
+
+        {/* Tech Stack */}
+        <section
+          data-aos="fade-up"
+          className={styles.techSection}
         >
-          <h1 style={{ color: "white", margin: "5%" }}>
-            Technologies I worked on
-          </h1>
-          <Balls></Balls>
-        </div>
-        <div className={style.workMarginTop}>
+          <span className={styles.label}>
+            TECH STACK
+          </span>
+
+          <h2 className={styles.heading}>
+            Technologies I build with
+          </h2>
+
+          <Balls />
+        </section>
+
+        {/* Projects */}
+        <section data-aos="fade-up">
           <Work />
-        </div>
-        <div className={style.contactHeight}>
+        </section>
+
+        {/* Contact */}
+        <section data-aos="fade-up">
           <Contact />
-        </div>
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-          async
-          integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-          crossOrigin="anonymous"
-        ></script>
+        </section>
       </main>
     </>
   );

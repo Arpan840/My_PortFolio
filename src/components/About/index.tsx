@@ -1,120 +1,262 @@
-import { Variants, motion, stagger } from "framer-motion";
-import services from "../../jsonFiles/services.json";
-import style from "../../styles/Invisable.module.css";
+import React, {
+  useEffect,
+  useState,
+} from "react";
+
+import {
+  motion,
+} from "framer-motion";
+
 import Tilt from "react-parallax-tilt";
+
+import {
+  useInView,
+} from "react-intersection-observer";
+
 import Aos from "aos";
-import 'aos/dist/aos.css'
+
+import "aos/dist/aos.css";
+
+import services from "../../jsonFiles/services.json";
+
+import styles from "../../styles/About.module.css";
+
+
+const containerVariants = {
+  hidden: {},
+
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+
+const cardVariants = {
+
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 
 const About = () => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        backgroundColor: "rgba(5,8,22,255)",
-        height: "100%",
-        padding: "0%",
-        width:'100vw',
-        textAlign:'center',
-        
-      }}
-    >
-      <p style={{ color: "white", width:'100vw', fontSize:'30px' }}> Introduction</p>
-      <h1
-        style={{
-          fontFamily: "monospace",
-          fontWeight: "bolder",
-          color: "#915eff",
-          width: "100vw",
-          fontSize:'60px',
-          textAlign:'center'
-        }}
-      >
-        Overview.
-      </h1>
 
-      <motion.p
-        style={{
-          color: "lightblue",
-          fontSize: "17px",
-          margin: "15px",
-          width: "60vw",
+  const [novaKey, setNovaKey] =
+    useState(0);
+
+
+  const [ref, inView] =
+    useInView({
+      threshold: 0.35,
+      triggerOnce: false,
+    });
+
+
+  useEffect(() => {
+
+    Aos.init({
+      duration: 800,
+    });
+
+  }, []);
+
+
+  useEffect(() => {
+
+    if (inView) {
+      setNovaKey(
+        Date.now()
+      );
+    }
+
+  }, [inView]);
+
+
+  return (
+
+    <section
+      ref={ref}
+      className={styles.wrapper}
+      id="About"
+    >
+
+      {/* supernova */}
+
+      {inView && (
+        <div
+          key={novaKey}
+          className={
+            styles.supernova
+          }
+        />
+      )}
+
+
+      {/* header */}
+
+      <div
+        className={
+          styles.header
+        }
+      >
+
+        <span
+          className={
+            styles.label
+          }
+        >
+          ENGINEERING IDENTITY
+        </span>
+
+
+        <h2
+          className={
+            styles.title
+          }
+        >
+          Building products,
+          <span>
+            {" "}systems
+          </span>,
+          and infrastructure.
+        </h2>
+
+
+        <p
+          className={
+            styles.description
+          }
+        >
+          I’m Arpan Das,
+          a Full Stack Systems
+          Engineer focused on
+          building scalable
+          backend platforms,
+          developer SDKs,
+          multi-tenant SaaS
+          products, and
+          AI-powered
+          infrastructure.
+        </p>
+
+      </div>
+
+
+      {/* cards */}
+
+      <motion.div
+        className={
+          styles.cards
+        }
+
+        variants={
+          containerVariants
+        }
+
+        initial="hidden"
+
+        whileInView="show"
+
+        viewport={{
+          once: false,
         }}
       >
-        Im a MERN stack developer with one year of experience at Klyth Private
-        Limited. Proficient in TypeScript, JavaScript, HTML, and CSS, I
-        specialize in creating visually appealing, user-friendly web
-        applications. I excel in front-end development using React.js, Next.js,
-        Material UI, and Bootstrap, while also handling back-end tasks with
-        Node.js, Express.js, and MongoDB. Im passionate about staying updated
-        with industry trends and Im committed to delivering high-quality web
-        solutions.
-      </motion.p>
-      <motion.section
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          width: "80vw",
-          margin: "auto",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "10%",
-          marginTop: "5%",
-          flexWrap: "wrap",
-        }}
-      >
-        {services.map((i, index) => (
-          <div data-aos={'flip-up'} key={index}>
-          <Tilt
-            glareEnable={true}
-            tiltMaxAngleX={30}
-            tiltMaxAngleY={30}
-            perspective={2000}
-            glareColor={"rgb(255,0,0)"}
-            className={style.borderRadious}
-            key={index}
-            style={{
-              width: "200px",
-              alignItems: "center",
-              height: "250px",
-              display: "flex",
-              margin: "2%",
-              justifyContent: "center",
-              flexDirection: "column",
-              backgroundColor: "rgb(49 46 129)",
-            }}
-          >
-            <div
-           
-              style={{
-                width: "80%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+
+        {services.map(
+          (
+            service,
+            index
+          ) => (
+
+            <motion.div
+              key={index}
+
+              variants={
+                cardVariants
+              }
             >
-              <img style={{ width: "80%" }} src={i.icon} alt="icon"></img>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                margin: "20px",
-                fontSize: "16px",
-                color: "white",
-              }}
-            >
-              {i.title}
-            </div>
-          </Tilt>
-          </div>
-        ))}
-      </motion.section>
-    </div>
+
+              <Tilt
+                tiltMaxAngleX={8}
+
+                tiltMaxAngleY={8}
+
+                perspective={1500}
+
+                glareEnable
+
+                glareMaxOpacity={
+                  0.15
+                }
+
+                className={
+                  styles.tilt
+                }
+              >
+
+                <div
+                  className={
+                    styles.card
+                  }
+                >
+
+                  <img
+                    src={
+                      service.icon
+                    }
+
+                    alt={
+                      service.title
+                    }
+
+                    className={
+                      styles.icon
+                    }
+                  />
+
+
+                  <h3
+                    className={
+                      styles.cardTitle
+                    }
+                  >
+                    {
+                      service.title
+                    }
+                  </h3>
+
+
+                  <p
+                    className={
+                      styles.cardText
+                    }
+                  >
+                    Production-focused
+                    engineering with
+                    clean architecture,
+                    performance,
+                    and scalability.
+                  </p>
+
+                </div>
+
+              </Tilt>
+
+            </motion.div>
+          )
+        )}
+
+      </motion.div>
+
+    </section>
   );
 };
 

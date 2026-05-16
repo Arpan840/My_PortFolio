@@ -1,144 +1,115 @@
-import { motion, useInView } from "framer-motion";
-import style from "../../styles/Invisable.module.css";
-import Image from 'next/image';
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import Balls from "../Balls";
-import klythePro from "../../../public/assets/company/klythe.jpeg"
+import React from "react";
+import { motion } from "framer-motion";
+
+import styles from "../../styles/Experience.module.css";
+
+const experiences = [
+  {
+    year: "2025 — Present",
+    company: "Trigma",
+    role: "Full Stack Systems Engineer",
+
+    description:
+      "Designing enterprise-grade backend systems, multi-tenant SaaS architectures, secure APIs, SDK infrastructure, and cloud-native products.",
+  },
+
+  {
+    year: "2024 — 2025",
+    company: "Hoop Konsulting",
+    role: "Full Stack Developer",
+
+    description:
+      "Built scalable backend services using Node.js, TypeScript, PostgreSQL, WebSockets, Firebase, AWS S3, and real-time analytics dashboards.",
+  },
+
+  {
+    year: "2024",
+    company: "NextPage IT Solutions",
+    role: "Frontend Engineer",
+
+    description:
+      "Led frontend architecture with React and Angular while improving developer workflows and delivery pipelines.",
+  },
+
+  {
+    year: "2023 — 2024",
+    company: "Klythe Private Limited",
+    role: "Full Stack Developer",
+
+    description:
+      "Built production web applications, APIs, reusable components, and performance-focused product features.",
+  },
+];
 
 const Experience = () => {
   return (
-    <>
-      <div
-        id="Experience"
-        className={style.experience}
-        style={{
-          color: "white",
-          height: "100%",
-          padding: "5%",
-          width: "100vw",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <motion.div
-          style={{
-            width: "100vw",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-          }}
-        >
-          <p style={{ color: "white", fontSize: "30px", textAlign: "center" }}>
-            {" "}
-            What I have done so far.
-          </p>
-          <h1
-            style={{
-              fontFamily: "monospace",
-              fontWeight: "bolder",
-              color: "#915eff",
-              textAlign: "center",
-              fontSize: "50px",
-            }}
-          >
-            Work Expirence.
-          </h1>
-        </motion.div>
-        <div
-          className={style.experience}
-          style={{
-            width: "100vw",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            
-          }}
-        >
-          <div
-            className={style.borderRadious}
-            style={{
-              width: "25rem",
-              padding: "20px",
-              marginTop: "5%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-              margin:"50px"
-            }}
-          >
-            <img
-              style={{ width: "60%", height: "50%" }}
-              className="card-img-top"
-              src={
-                "https://media.licdn.com/dms/image/C4D0BAQH1CuGtEo8Ezg/company-logo_200_200/0/1631350343181?e=1709769600&v=beta&t=ooF3YPZFuMBiktk1f538HraBTcPUgDT1Ia-1AQ1VOSU"
-              }
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h5
-                className="card-title"
-                style={{ color: "skyblue", fontSize: "30px" }}
-              >
-                NextPage IT Solutions
-              </h5>
-              <p className="card-text">
-                As a Senior Frontend Developer at nextPage IT Solutions, I am at the forefront of transforming digital landscapes. Collaborating with a talented team, I lead the development of cutting-edge user interfaces, ensuring seamless integration and optimal performance. My role involves translating design concepts into pixel-perfect, responsive applications, utilizing my expertise in modern frontend frameworks like React, Angular, or Vue.js.
+    <section
+      id="Experience"
+      className={styles.wrapper}
+    >
+      <div className={styles.header}>
+        <span className={styles.label}>
+          CAREER JOURNEY
+        </span>
 
-                Working in an innovative environment, I contribute to the companys commitment to excellence in coding, testing, and version control. Beyond crafting code, I mentor junior developers, fostering a collaborative and growth-oriented culture. The flexibility of our work environment and the emphasis on continuous learning make nextPage IT Solutions an ideal place for honing skills and pushing the boundaries of frontend development.
-              </p>
-              <a href="https://www.nextpageit.com/" className="btn btn-primary" target="_blank">
-                Visit website
-              </a>
-            </div>
-          </div>
-          <div
-            className={style.borderRadious}
-            style={{
-              width: "25rem",
-              padding: "20px",
-              marginTop: "5%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column"
-            }}
-          >
-            <Image
-              style={{ width: "60%", height: "50%" }}
-              className="card-img-top"
-              src={klythePro}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h5
-                className="card-title"
-                style={{ color: "skyblue", fontSize: "30px" }}
-              >
-                Klythe Private Limited{" "}
-              </h5>
-              <p className="card-text">
-                As a MERN (MongoDB, Express.js, React, Node.js) stack developer
-                at Klythe Private Limited, I have gained valuable experience and
-                expertise in building web applications using the MERN technology
-                stack. Over the course of one year, I have contributed to
-                various projects and have developed a strong skill set
-              </p>
-              <a href="https://www.linkedin.com/company/klythe/about/" className="btn btn-primary" target="_blank">
-                Visit website
-              </a>
-            </div>
-          </div>
-        </div>
+        <h2 className={styles.title}>
+          Experience that built
+          <span> engineering depth</span>
+        </h2>
       </div>
 
-    </>
+      <div className={styles.timeline}>
+        {experiences.map((item, index) => (
+          <motion.div
+            key={index}
+            className={styles.item}
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.2,
+            }}
+            viewport={{ once: true }}
+          >
+            <div className={styles.year}>
+              {item.year}
+            </div>
+
+            <div className={styles.lineBox}>
+              <div className={styles.dot} />
+              {index !== experiences.length - 1 && (
+                <div className={styles.line} />
+              )}
+            </div>
+
+            <motion.div
+              whileHover={{
+                y: -8,
+              }}
+              className={styles.card}
+            >
+              <h3 className={styles.company}>
+                {item.company}
+              </h3>
+
+              <h4 className={styles.role}>
+                {item.role}
+              </h4>
+
+              <p className={styles.description}>
+                {item.description}
+              </p>
+            </motion.div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
   );
 };
 

@@ -1,0 +1,211 @@
+.wrapper {
+  position: relative;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(160px, 1fr)
+  );
+
+  gap: 28px;
+
+  padding: 40px 0;
+
+  z-index: 5;
+}
+
+
+
+/* skill card */
+
+.card {
+  position: relative;
+
+  height: 180px;
+
+  border-radius: 26px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  transition: 0.4s ease;
+
+  overflow: hidden;
+}
+
+
+/* top glow */
+
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -60%;
+
+  left: -60%;
+
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    transparent,
+    rgba(145,94,255,0.12),
+    transparent
+  );
+
+  transform: rotate(25deg);
+
+  transition: 0.6s;
+}
+
+
+.card:hover::before {
+  left: 100%;
+}
+
+
+/* hover */
+
+.card:hover {
+  transform:
+    translateY(-10px)
+    scale(1.04);
+
+  box-shadow:
+    0 0 45px rgba(145,94,255,0.22);
+}
+
+
+
+/* icon */
+
+.icon {
+  width: 72px;
+  height: 72px;
+
+  object-fit: contain;
+
+  margin-bottom: 20px;
+
+  transition: 0.35s ease;
+
+  z-index: 2;
+}
+
+
+.card:hover .icon {
+  transform:
+    scale(1.12)
+    rotate(6deg);
+}
+
+
+
+/* text */
+
+.name {
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+
+
+/* top skills */
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4) {
+
+  border: 1px solid rgba(145,94,255,0.25);
+
+  box-shadow:
+    0 0 35px rgba(145,94,255,0.12);
+}
+
+
+
+/* floating animation */
+
+.card:nth-child(odd) {
+  animation: float1 5s ease-in-out infinite;
+}
+
+.card:nth-child(even) {
+  animation: float2 5s ease-in-out infinite;
+}
+
+
+@keyframes float1 {
+
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
+@keyframes float2 {
+
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+
+
+/* mobile */
+
+@media (max-width: 768px) {
+
+  .wrapper {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 18px;
+  }
+
+  .card {
+    height: 150px;
+  }
+
+  .icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+}

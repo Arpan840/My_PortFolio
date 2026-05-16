@@ -1,149 +1,130 @@
-import React from "react";
-import heroBackground from "../../assets/herobg.png";
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
-import styles from "../../styles/Invisable.module.css";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import Aos from "aos";
-import "aos/dist/aos.css"
+import "aos/dist/aos.css";
+import NextLink from "next/link";
+
+import { Link as ScrollLink } from "react-scroll";
+
+import heroBackground from "../../assets/herobg.png";
+import heroImage from "../../../public/assets/heroImage.png"; // your image
+
+import styles from "../../styles/Hero.module.css";
 
 const Hero = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "row",
-      }}
-    >
-      <Image
+    <section className={styles.heroWrapper}>
+      <div className={styles.stars}></div>
+      
+      <div className={styles.galaxy}></div>
+
+      <div className={styles.galaxy2}></div>
+
+      <div className={styles.core}></div>
+
+      <div className={styles.shootingStar}></div>
+      {/* Background */}
+      {/* <Image
         src={heroBackground}
-        alt={"background"}
-        style={{ height: "100vh", width: "100vw", margin: "auto" }}
-      ></Image>
-      <div
-        className={styles.center}
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "35%",
-          transform: "translate(-50%, -50%)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <div>
-          <div
-            style={{
-              borderRadius: "100%",
-              background: "#915eff",
-              height: "20px",
-              width: "20px",
-              margin: "20px",
-            }}
-          ></div>
-          <div
-            style={{
-              height: "300px",
-              width: "5px",
-              marginLeft: "27.5px",
-              marginTop: "-20px",
-              background: "linear-gradient(to bottom, #915eff, black)",
-            }}
-          ></div>
-        </div>
-        <div  style={{ display: "flex", flexDirection: "column" }}>
-          <div className={styles.type}>
-            <h1
-              style={{
-                color: "white",
-                fontSize: "50px",
-                marginTop: "25px",
-              }}
-            >
-              Hi! Im{" "}
-              <span
-                style={{
-                  fontFamily: "monospace",
-                  fontWeight: "bolder",
-                  color: "#915eff",
-                }}
-              >
-                Arpan
-              </span>{" "}
-            </h1>
+        alt="background"
+        fill
+        priority
+        className={styles.background}
+      /> */}
+
+      {/* Overlay */}
+      <div className={styles.overlay} />
+
+      {/* Floating blobs */}
+      <div className={styles.blob1} />
+      <div className={styles.blob2} />
+
+      {/* Main content */}
+      <div className={styles.container}>
+        {/* Left side */}
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className={styles.left}
+        >
+          <span className={styles.badge}>Full Stack Systems Engineer</span>
+
+          <h1 className={styles.title}>
+            Building scalable
+            <span> SaaS systems</span>,
+            <br />
+            AI products, and
+            <br />
+            developer infrastructure.
+          </h1>
+
+          <p className={styles.description}>
+            I’m Arpan Das — focused on NestJS, TypeScript, distributed backend
+            systems, SDK development, and AI-powered products.
+          </p>
+
+          {/* CTA */}
+          <div className={styles.actions}>
+            <ScrollLink to="Work" smooth={true} duration={700} offset={-100}>
+              <button className={styles.primaryBtn}>View Projects</button>
+            </ScrollLink>
+
+            {/* <a href="/resume.pdf" target="_blank" rel="noreferrer">
+              <button className={styles.secondaryBtn}>Resume</button>
+            </a> */}
           </div>
-          <div dats-aos="fade-up">
-            <p style={{ color: "white" }}>
-              Im a passionate and highly skilled MERN (MongoDB, Express.js,
-              React, Node.js) stack developer with a strong background in
-              creating web applications and dynamic user experiences. With a
-              deep understanding of both front-end and back-end technologies, I
-              bring your digital ideas to life by crafting robust, scalable, and
-              efficient solutions.
-            </p>
+
+          {/* Tech pills */}
+          <div className={styles.techs}>
+            <span>NestJS</span>
+            <span>TypeScript</span>
+            <span>PostgreSQL</span>
+            <span>MongoDb</span>
+            <span>Redis</span>
+            <span>Docker</span>
+            <span>AI</span>
           </div>
-        </div>
-        <div data-aos={'flip-right'} className={styles.invisable}>
-          <img
-          className={styles.slideInRight}
-            style={{ height: "-100%", width: "300%" }}
-            src="https://t3.ftcdn.net/jpg/03/18/60/62/360_F_318606217_Hk8jo2MVoI33SQOkYrfOF929J7JgIP0P.jpg"
-            alt="hero image"
+        </motion.div>
+
+        {/* Right side */}
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className={styles.right}
+        >
+          <div className={styles.imageCard}>
+            <Image src={heroImage} alt="Arpan" className={styles.heroImage} />
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Scroll indicator */}
+      <Link to="About" smooth>
+        <div className={styles.scroll}>
+          <motion.div
+            animate={{ y: [0, 15, 0] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+            }}
+            className={styles.scrollDot}
           />
         </div>
-      </div>
-      <div
-        className={styles.more}
-        style={{
-          height: "200px",
-          position: "absolute",
-          marginTop: "0%",
-          width: "100vw",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Link to={"About"} className={styles.centerMore}>
-          <div
-            className={styles.more}
-            style={{
-              border: "3px solid white",
-              height: "70px",
-              width: "40px",
-              borderRadius: "20px",
-              transform: "translate(40%, -50%)",
-              position: "absolute",
-              margin: "auto",
-              marginTop: "10%",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <motion.div
-              animate={{ y: [0, 24, 0] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              style={{
-                width: "20px",
-                height: "20px",
-                border: "2px solid white",
-                backgroundColor: "white",
-                borderRadius: "100%",
-                padding: "10px",
-                margin: "10px",
-              }}
-            ></motion.div>
-          </div>
-        </Link>
-      </div>
-    </div>
+      </Link>
+    </section>
   );
 };
 

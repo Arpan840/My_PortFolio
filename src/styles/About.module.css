@@ -1,0 +1,405 @@
+.wrapper {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 120px 8%;
+
+  background: #050816;
+
+  overflow: hidden;
+}
+
+
+/* background glow */
+
+.wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  top: 10%;
+  left: 10%;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  background: rgba(145, 94, 255, 0.08);
+
+  filter: blur(120px);
+
+  z-index: 0;
+}
+
+
+.wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 10%;
+  right: 10%;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 255, 255, 0.06);
+
+  filter: blur(120px);
+
+  z-index: 0;
+}
+
+
+/* heading */
+
+.header {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 900px;
+
+  margin: auto;
+  margin-bottom: 80px;
+
+  text-align: center;
+}
+
+
+.label {
+  display: inline-block;
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: #915eff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  margin-bottom: 30px;
+
+  letter-spacing: 1px;
+}
+
+
+.title {
+  color: white;
+
+  font-size: 58px;
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  margin-bottom: 30px;
+}
+
+
+.title span {
+  color: #915eff;
+}
+
+
+.description {
+  color: rgba(255,255,255,0.72);
+
+  font-size: 20px;
+
+  line-height: 1.8;
+
+  max-width: 760px;
+
+  margin: auto;
+}
+
+
+/* cards */
+
+.cards {
+  position: relative;
+
+  z-index: 5;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 35px;
+
+  max-width: 1400px;
+
+  margin: auto;
+}
+
+
+.tilt {
+  width: 100%;
+}
+
+
+.card {
+  position: relative;
+
+  height: 340px;
+
+  padding: 40px 30px;
+
+  border-radius: 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 0 30px rgba(145,94,255,0.08);
+
+  transition: 0.35s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 0 45px rgba(145,94,255,0.22);
+}
+
+
+/* icon */
+
+.icon {
+  width: 90px;
+  height: 90px;
+
+  object-fit: contain;
+
+  margin-bottom: 30px;
+
+  transition: 0.4s ease;
+}
+
+
+.card:hover .icon {
+  transform: scale(1.08);
+}
+
+
+/* content */
+
+.cardTitle {
+  color: white;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+
+.cardText {
+  color: rgba(255,255,255,0.65);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* responsive */
+
+@media (max-width: 992px) {
+
+  .wrapper {
+    padding: 100px 5%;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .card {
+    height: 300px;
+
+    padding: 30px 20px;
+  }
+
+  .icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+}
+/* SUPERNOVA */
+
+.supernova {
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  background:
+    radial-gradient(
+      circle,
+      #ffffff,
+      #915eff,
+      #00ffff
+    );
+
+  box-shadow:
+    0 0 50px #915eff,
+    0 0 100px #00ffff,
+    0 0 150px #ff00cc;
+
+  animation:
+    supernovaBlast 2.4s ease-out forwards;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+
+/* explosion */
+
+@keyframes supernovaBlast {
+
+  0% {
+
+    transform:
+      translate(-50%, -50%)
+      scale(0);
+
+    opacity: 1;
+  }
+
+
+  15% {
+
+    transform:
+      translate(-50%, -50%)
+      scale(2);
+  }
+
+
+  35% {
+
+    transform:
+      translate(-50%, -50%)
+      scale(8);
+  }
+
+
+  60% {
+
+    transform:
+      translate(-50%, -50%)
+      scale(25);
+
+    opacity: 0.8;
+  }
+
+
+  100% {
+
+    transform:
+      translate(-50%, -50%)
+      scale(40);
+
+    opacity: 0;
+  }
+}
+.supernova::before,
+.supernova::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: -20px;
+
+  border-radius: 50%;
+
+  border:
+    2px solid rgba(255,255,255,0.4);
+
+  animation:
+    particleRing 2s ease-out forwards;
+}
+
+
+.supernova::after {
+
+  animation-delay: 0.2s;
+}
+
+
+@keyframes particleRing {
+
+  from {
+
+    transform: scale(1);
+
+    opacity: 1;
+  }
+
+  to {
+
+    transform: scale(20);
+
+    opacity: 0;
+  }
+}

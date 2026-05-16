@@ -1,54 +1,58 @@
 import React from "react";
-import balls from "../../jsonFiles/balls.json";
-import style from "../../styles/Invisable.module.css";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Tilt from "react-parallax-tilt";
-import Aos from "aos";
-import "aos/dist/aos.css";
+
+import balls from "../../jsonFiles/balls.json";
+import styles from "../../styles/Balls.module.css";
 
 const Balls = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-  });
   return (
-    <div
-      id="Technologies"
-      style={{
-        display: "flex",
-        width: "100vw",
-        flexWrap: "wrap",
-        gap: "3%",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      {balls.map((i, index) => (
-        <Tilt
-          tiltMaxAngleX={30}
-          tiltMaxAngleY={30}
+    <section id="Technologies" className={styles.wrapper}>
+      <div className={styles.stars}></div>
+      <div className={styles.vortex}></div>
+      <section className={styles.techSection}></section>
+      {balls.map((skill, index) => (
+        <motion.div
           key={index}
-          style={{
-            width: "20%",
-            height: "40%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            margin: "10px",
+          initial={{
+            opacity: 0,
+            y: 40,
           }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.45,
+            delay: index * 0.08,
+          }}
+          viewport={{ once: true }}
         >
-          <img
-            data-aos={"flip-right"}
-            className={style.borderRadious}
-            style={{ width: "50%", height: "50%", borderRadius: "100%" }}
-            src={i.icon}
-            alt="icon"
-          />
-          <h3 style={{ color: "white", marginTop: "30px" }}>{i.name}</h3>
-        </Tilt>
+          <Tilt
+            tiltMaxAngleX={8}
+            tiltMaxAngleY={8}
+            perspective={1200}
+            scale={1.02}
+            transitionSpeed={1200}
+            className={styles.tilt}
+          >
+            <div className={styles.card}>
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className={styles.icon}
+                loading="lazy"
+              />
+
+              <span className={styles.name}>{skill.name}</span>
+
+              {/* Top skills badge */}
+              {index < 4 && <span className={styles.topBadge}>Core</span>}
+            </div>
+          </Tilt>
+        </motion.div>
       ))}
-    </div>
+    </section>
   );
 };
 

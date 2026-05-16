@@ -1,0 +1,619 @@
+.wrapper {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 140px 6%;
+
+  background: #050816;
+
+  overflow: hidden;
+
+  text-align: center;
+}
+
+
+
+/* animated grid */
+
+.wrapper::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px
+    );
+
+  background-size: 40px 40px;
+
+  animation:
+    gridMove 20s linear infinite;
+}
+
+
+@keyframes gridMove {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(40px);
+  }
+}
+
+
+
+/* glowing core */
+
+.wrapper::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 20%;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  width: 300px;
+
+  height: 300px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(145,94,255,0.12);
+
+  filter: blur(100px);
+
+  animation:
+    corePulse 4s ease-in-out infinite;
+}
+
+
+@keyframes corePulse {
+
+  0%,100% {
+
+    transform:
+      translateX(-50%)
+      scale(1);
+  }
+
+  50% {
+
+    transform:
+      translateX(-50%)
+      scale(1.25);
+  }
+}
+
+
+
+/* header */
+
+.header {
+
+  position: relative;
+
+  z-index: 5;
+
+  margin-bottom: 90px;
+}
+
+
+.label {
+
+  display: inline-block;
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  color: #00ffff;
+
+  background:
+    rgba(0,255,255,0.08);
+
+  box-shadow:
+    0 0 25px rgba(0,255,255,0.2);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  margin-bottom: 30px;
+
+  animation:
+    pulseLabel 2s infinite;
+}
+
+
+@keyframes pulseLabel {
+
+  0%,100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+
+.title {
+
+  color: white;
+
+  font-size: 60px;
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  margin-bottom: 30px;
+
+  text-shadow:
+    0 0 25px rgba(145,94,255,0.3);
+}
+
+
+.subtitle {
+
+  color:
+    rgba(255,255,255,0.72);
+
+  font-size: 20px;
+
+  max-width: 800px;
+
+  margin: auto;
+
+  line-height: 1.8;
+}
+
+
+
+/* cards */
+
+.grid {
+
+  position: relative;
+
+  z-index: 5;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px,1fr));
+
+  gap: 35px;
+}
+
+
+
+/* social card */
+
+.card {
+
+  position: relative;
+
+  min-height: 280px;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  padding: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-decoration: none;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  transition: 0.45s ease;
+}
+
+
+
+/* rotating border */
+
+.card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: -3px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      130deg,
+      #00ffff,
+      #915eff,
+      #ff00cc,
+      #00ffff
+    );
+
+  opacity: 0.18;
+
+  filter: blur(20px);
+
+  animation:
+    rotateCard 6s linear infinite;
+}
+
+
+@keyframes rotateCard {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* hover */
+
+.card:hover {
+
+  transform:
+    translateY(-14px)
+    scale(1.03);
+
+  box-shadow:
+    0 0 60px rgba(145,94,255,0.25);
+}
+
+
+
+/* icon */
+
+.icon {
+
+  width: 80px;
+
+  height: 80px;
+
+  object-fit: contain;
+
+  margin-bottom: 25px;
+
+  z-index: 2;
+
+  animation:
+    floatIcon 4s ease-in-out infinite;
+}
+
+
+@keyframes floatIcon {
+
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+
+
+/* text */
+
+.name {
+
+  color: white;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  margin-bottom: 16px;
+
+  z-index: 2;
+}
+
+
+.visit {
+
+  color: #00ffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  z-index: 2;
+}
+
+
+
+/* footer */
+
+.footer {
+
+  position: relative;
+
+  z-index: 5;
+
+  color:
+    rgba(255,255,255,0.6);
+
+  margin-top: 100px;
+
+  font-size: 16px;
+}
+
+
+
+/* mobile */
+
+@media(max-width:768px){
+
+  .wrapper {
+
+    padding: 100px 5%;
+  }
+
+  .title {
+
+    font-size: 36px;
+  }
+
+  .subtitle {
+
+    font-size: 16px;
+  }
+
+  .card {
+
+    min-height: 220px;
+  }
+}
+.burst {
+
+  animation:
+    explodeCard 0.9s ease forwards;
+}
+
+
+@keyframes explodeCard {
+
+  0% {
+
+    transform: scale(1);
+
+    opacity: 1;
+  }
+
+
+  30% {
+
+    transform:
+      scale(1.15);
+
+    box-shadow:
+      0 0 100px
+      rgba(255,0,255,0.5);
+  }
+
+
+  70% {
+
+    transform:
+      scale(1.5)
+      rotate(10deg);
+  }
+
+
+  100% {
+
+    transform:
+      scale(0);
+
+    opacity: 0;
+
+    filter: blur(15px);
+  }
+}
+/* ======================= */
+/* SHOOTING STARS */
+/* ======================= */
+
+.starsLayer {
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  overflow: hidden;
+}
+
+
+
+/* each star */
+
+.starsLayer span {
+
+  position: absolute;
+
+  top: -10%;
+
+  left: -10%;
+
+  width: 4px;
+
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 0 12px white,
+    0 0 24px #00ffff;
+
+  animation:
+    shootingStar 5s linear infinite;
+}
+
+
+
+/* tail */
+
+.starsLayer span::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 0;
+
+  width: 180px;
+
+  height: 2px;
+
+  transform:
+    translateY(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      white,
+      transparent
+    );
+}
+
+
+
+/* different timings */
+
+.starsLayer span:nth-child(1) {
+
+  top: 8%;
+
+  left: 10%;
+
+  animation-delay: 0s;
+}
+
+
+.starsLayer span:nth-child(2) {
+
+  top: 20%;
+
+  left: 30%;
+
+  animation-delay: 1.2s;
+}
+
+
+.starsLayer span:nth-child(3) {
+
+  top: 5%;
+
+  left: 65%;
+
+  animation-delay: 2.5s;
+}
+
+
+.starsLayer span:nth-child(4) {
+
+  top: 30%;
+
+  left: 80%;
+
+  animation-delay: 3.8s;
+}
+
+
+.starsLayer span:nth-child(5) {
+
+  top: 12%;
+
+  left: 50%;
+
+  animation-delay: 4.8s;
+}
+
+
+
+/* movement */
+
+@keyframes shootingStar {
+
+  0% {
+
+    transform:
+      translate(0,0)
+      rotate(-35deg);
+
+    opacity: 0;
+  }
+
+
+  10% {
+
+    opacity: 1;
+  }
+
+
+  80% {
+
+    opacity: 1;
+  }
+
+
+  100% {
+
+    transform:
+      translate(900px,500px)
+      rotate(-35deg);
+
+    opacity: 0;
+  }
+}

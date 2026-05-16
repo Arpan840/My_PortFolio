@@ -1,0 +1,288 @@
+.navbar {
+
+  position: fixed;
+
+  top: 18px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 92%;
+
+  height: 72px;
+
+  padding: 0 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.04);
+
+  backdrop-filter: blur(30px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  z-index: 999;
+}
+
+
+
+/* smaller logo */
+
+.logoBox {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.logoIcon {
+
+  font-size: 28px;
+}
+
+
+.name {
+
+  font-size: 16px;
+
+  margin: 0;
+
+  line-height: 1.1;
+
+  color: white;
+}
+
+
+.role {
+
+  font-size: 11px;
+
+  margin: 0;
+
+  opacity: .65;
+
+  color: white;
+}
+
+
+@keyframes glowLogo {
+
+  0%,100% {
+
+    transform: scale(1);
+  }
+
+  50% {
+
+    transform: scale(1.1);
+  }
+}
+
+/* nav links */
+
+.links {
+
+  display: flex;
+
+  gap: 14px;
+}
+
+
+.link {
+
+  position: relative;
+
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  padding: 14px 24px;
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  color:
+    rgba(255,255,255,0.7);
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: 0.35s ease;
+}
+
+
+
+/* active */
+
+.active {
+
+  color: white;
+
+  background:
+    linear-gradient(
+      90deg,
+      #915eff,
+      #00ffff
+    );
+
+  box-shadow:
+    0 0 30px rgba(145,94,255,0.25);
+}
+
+
+
+/* hover */
+
+.link:hover {
+
+  color: white;
+
+  background:
+    rgba(255,255,255,0.05);
+}
+
+
+
+/* mobile */
+
+@media(max-width:992px){
+
+  .navbar {
+
+    flex-direction: column;
+
+    height: auto;
+
+    padding: 25px;
+  }
+
+
+  .links {
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    margin-top: 20px;
+  }
+}
+.logoBox {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+
+/* orb */
+
+.logoOrb {
+
+  position: relative;
+
+  width: 54px;
+
+  height: 54px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(145,94,255,0.3),
+      rgba(0,255,255,0.12)
+    );
+
+  box-shadow:
+    0 0 30px rgba(145,94,255,0.25);
+}
+
+
+
+/* spinning ring */
+
+.logoRing {
+
+  position: absolute;
+
+  inset: -3px;
+
+  border-radius: 50%;
+
+  border:
+    2px solid rgba(255,255,255,0.2);
+
+  border-top-color: #00ffff;
+
+  border-bottom-color: #915eff;
+}
+
+
+
+/* initials */
+
+.logoText {
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  z-index: 2;
+}
+
+
+
+/* text */
+
+.name {
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  margin: 0;
+}
+
+
+.role {
+
+  color:
+    rgba(255,255,255,0.6);
+
+  font-size: 11px;
+
+  margin: 0;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
