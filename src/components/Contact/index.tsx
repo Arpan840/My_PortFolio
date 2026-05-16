@@ -45,7 +45,7 @@ const Contact = () => {
       {/* header */}
 
       <div className={styles.header}>
-        <span className={styles.label}>LET'S BUILD</span>
+        <span className={styles.label}>Let&apos;s build</span>
 
         <h2 className={styles.title}>Have a product, platform, or AI idea?</h2>
 
